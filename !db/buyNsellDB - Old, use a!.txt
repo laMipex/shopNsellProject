@@ -1,0 +1,71 @@
+CREATE TABLE itemType (
+	item_typeID INT PRIMARY KEY NOT NULL,
+	item_Type VARCHAR(200) NOT NULL
+)
+
+CREATE TABLE item (
+	itemID INT PRIMARY KEY NOT NULL,
+	item_Name VARCHAR(100) NOT NULL,
+	item_Price INT NOT NULL,
+	item_Condition VARCHAR(20) NOT NULL,
+	item_Description VARCHAR(200) NOT NULL,
+	item_Image VARBINARY(MAX) NOT NULL,
+	item_typeID INT NOT NULL UNIQUE,
+	CONSTRAINT fk_itemType
+	FOREIGN KEY (item_typeID)
+	REFERENCES itemType (item_typeID)
+)
+
+CREATE TABLE seller (
+	ID INT PRIMARY KEY NOT NULL,
+	seller_name VARCHAR(20) NOT NULL,
+	phone_number VARCHAR(20) NOT NULL,
+	town VARCHAR(20) NOT NULL,
+	itemID INT NOT NULL UNIQUE,
+	CONSTRAINT fk_itemID
+	FOREIGN KEY (itemID)
+	REFERENCES item(itemID)
+)
+
+CREATE TABLE orderedItem (
+	orderID INT PRIMARY KEY NOT NULL,
+	itemID INT NOT NULL UNIQUE,
+	date DATETIME NOT NULL,
+	CONSTRAINT fk_itemID2
+	FOREIGN KEY (itemID)
+	REFERENCES item(itemID)
+)
+
+CREATE TABLE buyer (
+	buyerID INT PRIMARY KEY NOT NULL,
+	orderID INT NOT NULL UNIQUE,
+	buyer_name VARCHAR(50) NOT NULL,
+	phone_number INT NOT NULL,
+	address VARCHAR(50) NOT NULL,
+	town VARCHAR(50) NOT NULL,
+	CONSTRAINT fk_orderID2
+	FOREIGN KEY (orderID)
+	REFERENCES orderedItem(orderID),
+)
+
+CREATE TABLE paymentDetails (
+	paymentID INT PRIMARY KEY NOT NULL,
+	orderID INT NOT NULL UNIQUE,
+	buyerID INT NOT NULL UNIQUE,
+	amount INT NOT NULL,
+	provider VARCHAR(20) NOT NULL,
+	status VARCHAR(20) NOT NULL,
+	CONSTRAINT fk_orderID
+	FOREIGN KEY (orderID)
+	REFERENCES orderedItem(orderID),
+	CONSTRAINT fk_buyerID
+	FOREIGN KEY (buyerID)
+	REFERENCES buyer(buyerID)
+)
+
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY IDENTITY(1,1),
+    Username NVARCHAR(50) NOT NULL,
+    Email NVARCHAR(100) NOT NULL,         // Dodaj Unique da ne moze da se ponavlja email adresa!!!
+    Password NVARCHAR(255) NOT NULL
+);

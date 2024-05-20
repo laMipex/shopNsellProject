@@ -1,0 +1,654 @@
+﻿namespace BuyNSell
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnTabCart = new System.Windows.Forms.Button();
+            this.btnTabAdd = new System.Windows.Forms.Button();
+            this.btnTabLogin = new System.Windows.Forms.Button();
+            this.btnTabHome = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabHome = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabLogin = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnTabRegister = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtBoxPassword = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtBoxUsername = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabRegister = new System.Windows.Forms.TabPage();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtBoxPasswordReg = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtBoxEmailReg = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBoxUsernameReg = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tabAdd = new System.Windows.Forms.TabPage();
+            this.tabCart = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.closeButton = new System.Windows.Forms.Label();
+            this.shopNsellDataSet = new BuyNSell.shopNsellDataSet();
+            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itemTableAdapter = new BuyNSell.shopNsellDataSetTableAdapters.itemTableAdapter();
+            this.panel1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabRegister.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shopNsellDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnTabCart);
+            this.panel1.Controls.Add(this.btnTabAdd);
+            this.panel1.Controls.Add(this.btnTabLogin);
+            this.panel1.Controls.Add(this.btnTabHome);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(192, 575);
+            this.panel1.TabIndex = 0;
+            // 
+            // btnTabCart
+            // 
+            this.btnTabCart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTabCart.FlatAppearance.BorderSize = 0;
+            this.btnTabCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabCart.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabCart.Image = global::BuyNSell.Properties.Resources.shopping_cart_2838838;
+            this.btnTabCart.Location = new System.Drawing.Point(0, 315);
+            this.btnTabCart.Name = "btnTabCart";
+            this.btnTabCart.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTabCart.Size = new System.Drawing.Size(192, 65);
+            this.btnTabCart.TabIndex = 7;
+            this.btnTabCart.Text = "CART";
+            this.btnTabCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabCart.UseVisualStyleBackColor = true;
+            this.btnTabCart.Visible = false;
+            this.btnTabCart.Click += new System.EventHandler(this.btnTabCart_Click);
+            // 
+            // btnTabAdd
+            // 
+            this.btnTabAdd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTabAdd.FlatAppearance.BorderSize = 0;
+            this.btnTabAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabAdd.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabAdd.Image = global::BuyNSell.Properties.Resources.plus_8860964;
+            this.btnTabAdd.Location = new System.Drawing.Point(0, 250);
+            this.btnTabAdd.Name = "btnTabAdd";
+            this.btnTabAdd.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTabAdd.Size = new System.Drawing.Size(192, 65);
+            this.btnTabAdd.TabIndex = 6;
+            this.btnTabAdd.Text = "ADD";
+            this.btnTabAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabAdd.UseVisualStyleBackColor = true;
+            this.btnTabAdd.Visible = false;
+            this.btnTabAdd.Click += new System.EventHandler(this.btnTabAdd_Click);
+            // 
+            // btnTabLogin
+            // 
+            this.btnTabLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTabLogin.FlatAppearance.BorderSize = 0;
+            this.btnTabLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabLogin.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnTabLogin.Image")));
+            this.btnTabLogin.Location = new System.Drawing.Point(0, 185);
+            this.btnTabLogin.Name = "btnTabLogin";
+            this.btnTabLogin.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTabLogin.Size = new System.Drawing.Size(192, 65);
+            this.btnTabLogin.TabIndex = 4;
+            this.btnTabLogin.Text = "LOGIN";
+            this.btnTabLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabLogin.UseVisualStyleBackColor = true;
+            this.btnTabLogin.Click += new System.EventHandler(this.btnTabLogin_Click);
+            // 
+            // btnTabHome
+            // 
+            this.btnTabHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(47)))), ((int)(((byte)(255)))));
+            this.btnTabHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTabHome.FlatAppearance.BorderSize = 0;
+            this.btnTabHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabHome.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabHome.Image = ((System.Drawing.Image)(resources.GetObject("btnTabHome.Image")));
+            this.btnTabHome.Location = new System.Drawing.Point(0, 120);
+            this.btnTabHome.Name = "btnTabHome";
+            this.btnTabHome.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTabHome.Size = new System.Drawing.Size(192, 65);
+            this.btnTabHome.TabIndex = 3;
+            this.btnTabHome.Text = "HOME";
+            this.btnTabHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabHome.UseVisualStyleBackColor = false;
+            this.btnTabHome.Click += new System.EventHandler(this.btnTabHome_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 117);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(192, 3);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 108);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(192, 9);
+            this.panel4.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.panel2.BackgroundImage = global::BuyNSell.Properties.Resources.buyNsell;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(192, 108);
+            this.panel2.TabIndex = 0;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabHome);
+            this.tabControl1.Controls.Add(this.tabLogin);
+            this.tabControl1.Controls.Add(this.tabRegister);
+            this.tabControl1.Controls.Add(this.tabAdd);
+            this.tabControl1.Controls.Add(this.tabCart);
+            this.tabControl1.Location = new System.Drawing.Point(188, 14);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(875, 622);
+            this.tabControl1.TabIndex = 2;
+            // 
+            // tabHome
+            // 
+            this.tabHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.tabHome.Controls.Add(this.dataGridView1);
+            this.tabHome.Location = new System.Drawing.Point(4, 22);
+            this.tabHome.Name = "tabHome";
+            this.tabHome.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHome.Size = new System.Drawing.Size(867, 596);
+            this.tabHome.TabIndex = 0;
+            this.tabHome.Text = "home";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.Size = new System.Drawing.Size(831, 505);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // tabLogin
+            // 
+            this.tabLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.tabLogin.Controls.Add(this.pictureBox2);
+            this.tabLogin.Controls.Add(this.pictureBox1);
+            this.tabLogin.Controls.Add(this.btnTabRegister);
+            this.tabLogin.Controls.Add(this.btnLogin);
+            this.tabLogin.Controls.Add(this.label3);
+            this.tabLogin.Controls.Add(this.txtBoxPassword);
+            this.tabLogin.Controls.Add(this.label2);
+            this.tabLogin.Controls.Add(this.txtBoxUsername);
+            this.tabLogin.Controls.Add(this.label1);
+            this.tabLogin.Location = new System.Drawing.Point(4, 22);
+            this.tabLogin.Name = "tabLogin";
+            this.tabLogin.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLogin.Size = new System.Drawing.Size(867, 596);
+            this.tabLogin.TabIndex = 1;
+            this.tabLogin.Text = "login";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::BuyNSell.Properties.Resources.padlock;
+            this.pictureBox2.Location = new System.Drawing.Point(705, 235);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(705, 148);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnTabRegister
+            // 
+            this.btnTabRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.btnTabRegister.FlatAppearance.BorderSize = 0;
+            this.btnTabRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabRegister.Font = new System.Drawing.Font("Lovelo Black", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnTabRegister.Location = new System.Drawing.Point(534, 330);
+            this.btnTabRegister.Name = "btnTabRegister";
+            this.btnTabRegister.Size = new System.Drawing.Size(190, 66);
+            this.btnTabRegister.TabIndex = 6;
+            this.btnTabRegister.Text = "REGISTER";
+            this.btnTabRegister.UseVisualStyleBackColor = false;
+            this.btnTabRegister.Click += new System.EventHandler(this.btnTabRegister_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Lovelo Black", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogin.Location = new System.Drawing.Point(294, 330);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(190, 66);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lovelo Black", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label3.Location = new System.Drawing.Point(132, 237);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 26);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Password:";
+            // 
+            // txtBoxPassword
+            // 
+            this.txtBoxPassword.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxPassword.Location = new System.Drawing.Point(279, 226);
+            this.txtBoxPassword.Name = "txtBoxPassword";
+            this.txtBoxPassword.Size = new System.Drawing.Size(462, 51);
+            this.txtBoxPassword.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lovelo Black", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label2.Location = new System.Drawing.Point(141, 152);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 26);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Username:";
+            // 
+            // txtBoxUsername
+            // 
+            this.txtBoxUsername.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxUsername.Location = new System.Drawing.Point(279, 139);
+            this.txtBoxUsername.Name = "txtBoxUsername";
+            this.txtBoxUsername.Size = new System.Drawing.Size(462, 51);
+            this.txtBoxUsername.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.Location = new System.Drawing.Point(41, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(359, 34);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Login to your account";
+            // 
+            // tabRegister
+            // 
+            this.tabRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.tabRegister.Controls.Add(this.pictureBox5);
+            this.tabRegister.Controls.Add(this.pictureBox3);
+            this.tabRegister.Controls.Add(this.pictureBox4);
+            this.tabRegister.Controls.Add(this.btnRegister);
+            this.tabRegister.Controls.Add(this.label7);
+            this.tabRegister.Controls.Add(this.txtBoxPasswordReg);
+            this.tabRegister.Controls.Add(this.label5);
+            this.tabRegister.Controls.Add(this.txtBoxEmailReg);
+            this.tabRegister.Controls.Add(this.label6);
+            this.tabRegister.Controls.Add(this.txtBoxUsernameReg);
+            this.tabRegister.Controls.Add(this.label4);
+            this.tabRegister.Location = new System.Drawing.Point(4, 22);
+            this.tabRegister.Name = "tabRegister";
+            this.tabRegister.Size = new System.Drawing.Size(867, 596);
+            this.tabRegister.TabIndex = 2;
+            this.tabRegister.Text = "register";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.Image = global::BuyNSell.Properties.Resources.email;
+            this.pictureBox5.Location = new System.Drawing.Point(705, 235);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 14;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::BuyNSell.Properties.Resources.padlock;
+            this.pictureBox3.Location = new System.Drawing.Point(705, 322);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(705, 148);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.btnRegister.FlatAppearance.BorderSize = 0;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Lovelo Black", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRegister.Location = new System.Drawing.Point(404, 394);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(190, 66);
+            this.btnRegister.TabIndex = 11;
+            this.btnRegister.Text = "REGISTER";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Lovelo Black", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label7.Location = new System.Drawing.Point(132, 328);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(125, 26);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Password:";
+            // 
+            // txtBoxPasswordReg
+            // 
+            this.txtBoxPasswordReg.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxPasswordReg.Location = new System.Drawing.Point(279, 313);
+            this.txtBoxPasswordReg.Name = "txtBoxPasswordReg";
+            this.txtBoxPasswordReg.Size = new System.Drawing.Size(462, 51);
+            this.txtBoxPasswordReg.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lovelo Black", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label5.Location = new System.Drawing.Point(185, 239);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 26);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Email:";
+            // 
+            // txtBoxEmailReg
+            // 
+            this.txtBoxEmailReg.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxEmailReg.Location = new System.Drawing.Point(279, 226);
+            this.txtBoxEmailReg.Name = "txtBoxEmailReg";
+            this.txtBoxEmailReg.Size = new System.Drawing.Size(462, 51);
+            this.txtBoxEmailReg.TabIndex = 7;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lovelo Black", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label6.Location = new System.Drawing.Point(141, 152);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 26);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Username:";
+            // 
+            // txtBoxUsernameReg
+            // 
+            this.txtBoxUsernameReg.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxUsernameReg.Location = new System.Drawing.Point(279, 139);
+            this.txtBoxUsernameReg.Name = "txtBoxUsernameReg";
+            this.txtBoxUsernameReg.Size = new System.Drawing.Size(462, 51);
+            this.txtBoxUsernameReg.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label4.Location = new System.Drawing.Point(41, 84);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(349, 34);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Register your account";
+            // 
+            // tabAdd
+            // 
+            this.tabAdd.Location = new System.Drawing.Point(4, 22);
+            this.tabAdd.Name = "tabAdd";
+            this.tabAdd.Size = new System.Drawing.Size(867, 596);
+            this.tabAdd.TabIndex = 3;
+            this.tabAdd.Text = "add";
+            this.tabAdd.UseVisualStyleBackColor = true;
+            // 
+            // tabCart
+            // 
+            this.tabCart.Location = new System.Drawing.Point(4, 22);
+            this.tabCart.Name = "tabCart";
+            this.tabCart.Size = new System.Drawing.Size(867, 596);
+            this.tabCart.TabIndex = 4;
+            this.tabCart.Text = "cart";
+            this.tabCart.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.closeButton);
+            this.panel5.Location = new System.Drawing.Point(405, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(633, 37);
+            this.panel5.TabIndex = 0;
+            // 
+            // closeButton
+            // 
+            this.closeButton.AutoSize = true;
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.closeButton.Location = new System.Drawing.Point(583, 3);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(50, 34);
+            this.closeButton.TabIndex = 2;
+            this.closeButton.Text = "✖";
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
+            // shopNsellDataSet
+            // 
+            this.shopNsellDataSet.DataSetName = "shopNsellDataSet";
+            this.shopNsellDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // itemBindingSource
+            // 
+            this.itemBindingSource.DataMember = "item";
+            this.itemBindingSource.DataSource = this.shopNsellDataSet;
+            // 
+            // itemTableAdapter
+            // 
+            this.itemTableAdapter.ClearBeforeFill = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ClientSize = new System.Drawing.Size(1038, 575);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tabControl1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Buy N\' Sell";
+            this.panel1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabHome.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabLogin.ResumeLayout(false);
+            this.tabLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabRegister.ResumeLayout(false);
+            this.tabRegister.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shopNsellDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnTabHome;
+        private System.Windows.Forms.Button btnTabAdd;
+        private System.Windows.Forms.Button btnTabLogin;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabHome;
+        private System.Windows.Forms.TabPage tabLogin;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnTabCart;
+        private System.Windows.Forms.TabPage tabRegister;
+        private System.Windows.Forms.TabPage tabAdd;
+        private System.Windows.Forms.TabPage tabCart;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtBoxUsername;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtBoxPassword;
+        private System.Windows.Forms.Label closeButton;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnTabRegister;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtBoxEmailReg;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtBoxUsernameReg;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtBoxPasswordReg;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private shopNsellDataSet shopNsellDataSet;
+        private System.Windows.Forms.BindingSource itemBindingSource;
+        private shopNsellDataSetTableAdapters.itemTableAdapter itemTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
+    }
+}
+

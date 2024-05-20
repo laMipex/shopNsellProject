@@ -1,0 +1,10 @@
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\bin\Debug\BuyNSell.exe.config
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\bin\Debug\BuyNSell.exe
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\bin\Debug\BuyNSell.pdb
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\obj\Debug\BuyNSell.csproj.AssemblyReference.cache
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\obj\Debug\BuyNSell.Form1.resources
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\obj\Debug\BuyNSell.Properties.Resources.resources
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\obj\Debug\BuyNSell.csproj.GenerateResource.cache
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\obj\Debug\BuyNSell.csproj.CoreCompileInputs.cache
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\obj\Debug\BuyNSell.exe
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\obj\Debug\BuyNSell.pdb
