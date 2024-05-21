@@ -12,7 +12,6 @@ VALUES
 
 
 INSERT INTO item (
-    itemID,
     item_Name,
     item_Price,
     item_Condition,
@@ -21,8 +20,7 @@ INSERT INTO item (
     item_Image_Data,
     item_typeID
 )
-SELECT 
-    1,  
+SELECT  
     'Camera Lens',
     500,
     'New',
@@ -35,7 +33,6 @@ FROM
 
 
 INSERT INTO item (
-    itemID,
     item_Name,
     item_Price,
     item_Condition,
@@ -45,7 +42,6 @@ INSERT INTO item (
     item_typeID
 )
 SELECT 
-    2,
     'Hilfiger Watch',
     150,
     'New',
@@ -58,7 +54,6 @@ FROM
 
 
 INSERT INTO item (
-    itemID,
     item_Name,
     item_Price,
     item_Condition,
@@ -68,7 +63,6 @@ INSERT INTO item (
     item_typeID
 )
 SELECT 
-    3,
     'Instamatic 133 Camera',
     200,
     'Used',
@@ -81,7 +75,6 @@ FROM
 
 
 INSERT INTO item (
-    itemID,
     item_Name,
     item_Price,
     item_Condition,
@@ -91,7 +84,6 @@ INSERT INTO item (
     item_typeID
 )
 SELECT 
-    4,
     'Laptop',
     800,
     'New',
@@ -104,7 +96,6 @@ FROM
 
 
 INSERT INTO item (
-    itemID,
     item_Name,
     item_Price,
     item_Condition,
@@ -114,7 +105,6 @@ INSERT INTO item (
     item_typeID
 )
 SELECT 
-    5,
     'Smart Watch',
     250,
     'New',
@@ -127,7 +117,6 @@ FROM
 
 
 INSERT INTO item (
-    itemID,
     item_Name,
     item_Price,
     item_Condition,
@@ -137,7 +126,6 @@ INSERT INTO item (
     item_typeID
 )
 SELECT 
-    6,  
     'Act+ Hair Mask',
     25,
     'New',
@@ -150,7 +138,6 @@ FROM
 
 
 INSERT INTO item (
-    itemID,
     item_Name,
     item_Price,
     item_Condition,
@@ -160,7 +147,6 @@ INSERT INTO item (
     item_typeID
 )
 SELECT 
-    7,  
     'Logitech Mouse',
     125,
     'Used',
