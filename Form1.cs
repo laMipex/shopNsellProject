@@ -6,6 +6,10 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using IronBarCode;
+
 
 namespace BuyNSell
 {
@@ -14,6 +18,7 @@ namespace BuyNSell
         string connectionString = "Data Source=DESKTOP-2AAQ8OB;Initial Catalog=shopNsell;Integrated Security=True";
         private DatabaseHelper dbHelper = new DatabaseHelper();
         private string imageUrl;
+        bool login = false;
 
         public Form1()
         {
@@ -28,14 +33,13 @@ namespace BuyNSell
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(30, 30, 30);
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Lovelo Black", 10);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Lovelo Black", 10);
             dataGridView1.EnableHeadersVisualStyles = false;
 
             dataGridView1.DefaultCellStyle.BackColor = Color.FromArgb(30, 30, 30);
             dataGridView1.DefaultCellStyle.ForeColor = Color.White;
-            dataGridView1.DefaultCellStyle.Font = new Font("Lovelo Black", 15);
+            dataGridView1.DefaultCellStyle.Font = new System.Drawing.Font("Lovelo Black", 15);
 
-            comBoxProdType.Text = "Choose One";
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -156,6 +160,8 @@ namespace BuyNSell
 
                 lbWelcome.Text = "Welcome " + username + "!";
                 lbWelcome.Visible = true;
+
+                login = true;
             }
             else
             {
@@ -289,7 +295,7 @@ namespace BuyNSell
                 {
                     using (MemoryStream ms = new MemoryStream(imageData))
                     {
-                        pictureBox1.Image = Image.FromStream(ms);
+                        pictureBox1.Image = System.Drawing.Image.FromStream(ms);
                     }
                 }
                 else
@@ -308,7 +314,7 @@ namespace BuyNSell
                 {
                     using (MemoryStream ms = new MemoryStream(imageBytes))
                     {
-                        Image img = Image.FromStream(ms);
+                        System.Drawing.Image img = System.Drawing.Image.FromStream(ms);
                         e.Value = new Bitmap(img, new Size(100, 100));
                     }
                 }
@@ -329,6 +335,9 @@ namespace BuyNSell
             txtBoxUsername.Text = "";
             txtBoxPassword.Text = "";
             lbWelcome.Visible = false;
+
+            labelCartEmpty.Visible = true;
+            btnReceipt.Visible = false;
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
@@ -344,7 +353,7 @@ namespace BuyNSell
 
         private byte[] ImageToByteArray(string imagePath)
         {
-            using (Image image = Image.FromFile(imagePath))
+            using (System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath))
             {
                 using (MemoryStream ms = new MemoryStream())
                 {
@@ -442,6 +451,78 @@ namespace BuyNSell
         private void Form1_Load(object sender, EventArgs e)
         {
             comBoxProdType.SelectedIndex = -1;
+        }
+
+        private void GeneratePdfWithQrCode(string filePath, DataGridViewRow selectedRow)
+        {
+            
+            string productName = selectedRow.Cells["Product"].Value.ToString();
+            string productDescription = selectedRow.Cells["Description"].Value.ToString();
+            string productCondition = selectedRow.Cells["Condition"].Value.ToString();
+            string productPrice = selectedRow.Cells["Price"].Value.ToString();
+            byte[] imageData = selectedRow.Cells["Image"].Value as byte[];
+
+            string qrText = $"Product: {productName}\nDescription: {productDescription}\nCondition: {productCondition}\nPrice: {productPrice}";
+            var qrCode = QRCodeWriter.CreateQrCode(qrText, 200);
+            var qrCodeImage = qrCode.ToBitmap();
+
+            using (var fs = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
+            using (var document = new Document(PageSize.A5, 50, 50, 25, 25))
+            using (var writer = PdfWriter.GetInstance(document, fs))
+            {
+                document.Open();
+
+                if (imageData != null)
+                {
+                    iTextSharp.text.Image itemImage = iTextSharp.text.Image.GetInstance(imageData);
+                    itemImage.ScaleToFit(150f, 150f);
+                    itemImage.Alignment = Element.ALIGN_LEFT;
+                    document.Add(itemImage);
+                }
+
+                document.Add(new Paragraph($"Product: {productName}", FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16)));
+                document.Add(new Paragraph($"Description: {productDescription}", FontFactory.GetFont(FontFactory.HELVETICA, 12)));
+                document.Add(new Paragraph($"Condition: {productCondition}", FontFactory.GetFont(FontFactory.HELVETICA, 12)));
+                document.Add(new Paragraph($"Price: {productPrice}", FontFactory.GetFont(FontFactory.HELVETICA, 12)));
+
+                using (var qrCodeStream = new MemoryStream())
+                {
+                    qrCodeImage.Save(qrCodeStream, System.Drawing.Imaging.ImageFormat.Png);
+                    var qrCodeBytes = qrCodeStream.ToArray();
+                    iTextSharp.text.Image qrCodePdfImage = iTextSharp.text.Image.GetInstance(qrCodeBytes);
+                    qrCodePdfImage.ScaleToFit(150f, 150f);
+                    qrCodePdfImage.Alignment = Element.ALIGN_LEFT;
+                    document.Add(qrCodePdfImage);
+                }
+
+                document.Close();
+            }
+
+            if (login == false)
+            {
+                MessageBox.Show("Please Login First!");
+            }
+            else
+            {
+                MessageBox.Show("Please Procide To Your Cart!");
+            }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+                string filePath = Path.Combine(Application.StartupPath, "Receipt.pdf");
+                GeneratePdfWithQrCode(filePath, selectedRow);
+                labelCartEmpty.Visible = false;
+                btnReceipt.Visible = true;
+            }
+        }
+
+        private void btnReceipt_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Receipt.pdf");
         }
     }
 }

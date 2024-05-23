@@ -29,25 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnTabLogout = new System.Windows.Forms.Button();
-            this.btnTabCart = new System.Windows.Forms.Button();
-            this.btnTabAdd = new System.Windows.Forms.Button();
-            this.btnTabLogin = new System.Windows.Forms.Button();
-            this.btnTabHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabHome = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabLogin = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnTabRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,9 +48,6 @@
             this.txtBoxUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabRegister = new System.Windows.Forms.TabPage();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBoxPasswordReg = new System.Windows.Forms.TextBox();
@@ -70,8 +59,6 @@
             this.tabAdd = new System.Windows.Forms.TabPage();
             this.comBoxProdType = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnAddProduct = new System.Windows.Forms.Button();
-            this.btnUpload = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.txtBoxProdPrice = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -89,21 +76,37 @@
             this.shopNsellDataSet = new BuyNSell.shopNsellDataSet();
             this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemTableAdapter = new BuyNSell.shopNsellDataSetTableAdapters.itemTableAdapter();
+            this.labelCartEmpty = new System.Windows.Forms.Label();
+            this.btnTabLogout = new System.Windows.Forms.Button();
+            this.btnTabCart = new System.Windows.Forms.Button();
+            this.btnTabAdd = new System.Windows.Forms.Button();
+            this.btnTabLogin = new System.Windows.Forms.Button();
+            this.btnTabHome = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.btnReceipt = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabRegister.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabAdd.SuspendLayout();
+            this.tabCart.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shopNsellDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -123,95 +126,6 @@
             this.panel1.Size = new System.Drawing.Size(192, 575);
             this.panel1.TabIndex = 0;
             // 
-            // btnTabLogout
-            // 
-            this.btnTabLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnTabLogout.FlatAppearance.BorderSize = 0;
-            this.btnTabLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabLogout.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabLogout.Image = global::BuyNSell.Properties.Resources.logout_1828479;
-            this.btnTabLogout.Location = new System.Drawing.Point(0, 510);
-            this.btnTabLogout.Name = "btnTabLogout";
-            this.btnTabLogout.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnTabLogout.Size = new System.Drawing.Size(192, 65);
-            this.btnTabLogout.TabIndex = 8;
-            this.btnTabLogout.Text = "LOGOUT";
-            this.btnTabLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTabLogout.UseVisualStyleBackColor = true;
-            this.btnTabLogout.Visible = false;
-            this.btnTabLogout.Click += new System.EventHandler(this.btnTabLogout_Click);
-            // 
-            // btnTabCart
-            // 
-            this.btnTabCart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTabCart.FlatAppearance.BorderSize = 0;
-            this.btnTabCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabCart.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabCart.Image = global::BuyNSell.Properties.Resources.shopping_cart_2838838;
-            this.btnTabCart.Location = new System.Drawing.Point(0, 315);
-            this.btnTabCart.Name = "btnTabCart";
-            this.btnTabCart.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnTabCart.Size = new System.Drawing.Size(192, 65);
-            this.btnTabCart.TabIndex = 7;
-            this.btnTabCart.Text = "CART";
-            this.btnTabCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTabCart.UseVisualStyleBackColor = true;
-            this.btnTabCart.Visible = false;
-            this.btnTabCart.Click += new System.EventHandler(this.btnTabCart_Click);
-            // 
-            // btnTabAdd
-            // 
-            this.btnTabAdd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTabAdd.FlatAppearance.BorderSize = 0;
-            this.btnTabAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabAdd.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabAdd.Image = global::BuyNSell.Properties.Resources.plus_8860964;
-            this.btnTabAdd.Location = new System.Drawing.Point(0, 250);
-            this.btnTabAdd.Name = "btnTabAdd";
-            this.btnTabAdd.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnTabAdd.Size = new System.Drawing.Size(192, 65);
-            this.btnTabAdd.TabIndex = 6;
-            this.btnTabAdd.Text = "ADD";
-            this.btnTabAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTabAdd.UseVisualStyleBackColor = true;
-            this.btnTabAdd.Visible = false;
-            this.btnTabAdd.Click += new System.EventHandler(this.btnTabAdd_Click);
-            // 
-            // btnTabLogin
-            // 
-            this.btnTabLogin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTabLogin.FlatAppearance.BorderSize = 0;
-            this.btnTabLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabLogin.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnTabLogin.Image")));
-            this.btnTabLogin.Location = new System.Drawing.Point(0, 185);
-            this.btnTabLogin.Name = "btnTabLogin";
-            this.btnTabLogin.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnTabLogin.Size = new System.Drawing.Size(192, 65);
-            this.btnTabLogin.TabIndex = 4;
-            this.btnTabLogin.Text = "LOGIN";
-            this.btnTabLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTabLogin.UseVisualStyleBackColor = true;
-            this.btnTabLogin.Click += new System.EventHandler(this.btnTabLogin_Click);
-            // 
-            // btnTabHome
-            // 
-            this.btnTabHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(47)))), ((int)(((byte)(255)))));
-            this.btnTabHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTabHome.FlatAppearance.BorderSize = 0;
-            this.btnTabHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabHome.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabHome.Image = ((System.Drawing.Image)(resources.GetObject("btnTabHome.Image")));
-            this.btnTabHome.Location = new System.Drawing.Point(0, 120);
-            this.btnTabHome.Name = "btnTabHome";
-            this.btnTabHome.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnTabHome.Size = new System.Drawing.Size(192, 65);
-            this.btnTabHome.TabIndex = 3;
-            this.btnTabHome.Text = "HOME";
-            this.btnTabHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTabHome.UseVisualStyleBackColor = false;
-            this.btnTabHome.Click += new System.EventHandler(this.btnTabHome_Click);
-            // 
             // panel3
             // 
             this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -229,17 +143,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(192, 9);
             this.panel4.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
-            this.panel2.BackgroundImage = global::BuyNSell.Properties.Resources.buyNsell;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(192, 108);
-            this.panel2.TabIndex = 0;
             // 
             // tabControl1
             // 
@@ -290,7 +193,6 @@
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.dataGridView1.Location = new System.Drawing.Point(-45, 28);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -301,6 +203,7 @@
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.Size = new System.Drawing.Size(964, 525);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // tabLogin
             // 
@@ -320,28 +223,6 @@
             this.tabLogin.Size = new System.Drawing.Size(939, 596);
             this.tabLogin.TabIndex = 1;
             this.tabLogin.Text = "login";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = global::BuyNSell.Properties.Resources.padlock;
-            this.pictureBox2.Location = new System.Drawing.Point(705, 235);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(705, 148);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // btnTabRegister
             // 
@@ -442,39 +323,6 @@
             this.tabRegister.TabIndex = 2;
             this.tabRegister.Text = "register";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.Image = global::BuyNSell.Properties.Resources.email;
-            this.pictureBox5.Location = new System.Drawing.Point(705, 235);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 14;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = global::BuyNSell.Properties.Resources.padlock;
-            this.pictureBox3.Location = new System.Drawing.Point(705, 322);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(705, 148);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
-            // 
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
@@ -563,8 +411,6 @@
             this.tabAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.tabAdd.Controls.Add(this.comBoxProdType);
             this.tabAdd.Controls.Add(this.label14);
-            this.tabAdd.Controls.Add(this.btnAddProduct);
-            this.tabAdd.Controls.Add(this.btnUpload);
             this.tabAdd.Controls.Add(this.label13);
             this.tabAdd.Controls.Add(this.txtBoxProdPrice);
             this.tabAdd.Controls.Add(this.label12);
@@ -575,6 +421,8 @@
             this.tabAdd.Controls.Add(this.label10);
             this.tabAdd.Controls.Add(this.label9);
             this.tabAdd.Controls.Add(this.label8);
+            this.tabAdd.Controls.Add(this.btnAddProduct);
+            this.tabAdd.Controls.Add(this.btnUpload);
             this.tabAdd.Location = new System.Drawing.Point(4, 22);
             this.tabAdd.Name = "tabAdd";
             this.tabAdd.Size = new System.Drawing.Size(939, 596);
@@ -604,39 +452,6 @@
             this.label14.Size = new System.Drawing.Size(216, 34);
             this.label14.TabIndex = 16;
             this.label14.Text = "Product Type:";
-            // 
-            // btnAddProduct
-            // 
-            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
-            this.btnAddProduct.FlatAppearance.BorderSize = 0;
-            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddProduct.Font = new System.Drawing.Font("Lovelo Black", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAddProduct.Image = global::BuyNSell.Properties.Resources.icons8_paper_plane_64;
-            this.btnAddProduct.Location = new System.Drawing.Point(785, 459);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(95, 68);
-            this.btnAddProduct.TabIndex = 15;
-            this.btnAddProduct.UseVisualStyleBackColor = false;
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
-            // 
-            // btnUpload
-            // 
-            this.btnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
-            this.btnUpload.FlatAppearance.BorderSize = 0;
-            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Font = new System.Drawing.Font("Lovelo Black", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpload.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnUpload.Image = global::BuyNSell.Properties.Resources.upload_4052016;
-            this.btnUpload.Location = new System.Drawing.Point(340, 401);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnUpload.Size = new System.Drawing.Size(190, 52);
-            this.btnUpload.TabIndex = 14;
-            this.btnUpload.Text = "UPLOAD";
-            this.btnUpload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUpload.UseVisualStyleBackColor = false;
-            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // label13
             // 
@@ -745,6 +560,8 @@
             // tabCart
             // 
             this.tabCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.tabCart.Controls.Add(this.btnReceipt);
+            this.tabCart.Controls.Add(this.labelCartEmpty);
             this.tabCart.Location = new System.Drawing.Point(4, 22);
             this.tabCart.Name = "tabCart";
             this.tabCart.Size = new System.Drawing.Size(939, 596);
@@ -755,9 +572,9 @@
             // 
             this.panel5.Controls.Add(this.lbWelcome);
             this.panel5.Controls.Add(this.closeButton);
-            this.panel5.Location = new System.Drawing.Point(192, 0);
+            this.panel5.Location = new System.Drawing.Point(470, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(901, 37);
+            this.panel5.Size = new System.Drawing.Size(623, 37);
             this.panel5.TabIndex = 0;
             // 
             // lbWelcome
@@ -800,6 +617,224 @@
             // 
             this.itemTableAdapter.ClearBeforeFill = true;
             // 
+            // labelCartEmpty
+            // 
+            this.labelCartEmpty.AutoSize = true;
+            this.labelCartEmpty.Font = new System.Drawing.Font("Lovelo Black", 45F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCartEmpty.ForeColor = System.Drawing.Color.White;
+            this.labelCartEmpty.Location = new System.Drawing.Point(127, 214);
+            this.labelCartEmpty.Name = "labelCartEmpty";
+            this.labelCartEmpty.Size = new System.Drawing.Size(650, 77);
+            this.labelCartEmpty.TabIndex = 4;
+            this.labelCartEmpty.Text = "Your cart is empty!";
+            // 
+            // btnTabLogout
+            // 
+            this.btnTabLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnTabLogout.FlatAppearance.BorderSize = 0;
+            this.btnTabLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabLogout.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabLogout.Image = global::BuyNSell.Properties.Resources.logout_1828479;
+            this.btnTabLogout.Location = new System.Drawing.Point(0, 510);
+            this.btnTabLogout.Name = "btnTabLogout";
+            this.btnTabLogout.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTabLogout.Size = new System.Drawing.Size(192, 65);
+            this.btnTabLogout.TabIndex = 8;
+            this.btnTabLogout.Text = "LOGOUT";
+            this.btnTabLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabLogout.UseVisualStyleBackColor = true;
+            this.btnTabLogout.Visible = false;
+            this.btnTabLogout.Click += new System.EventHandler(this.btnTabLogout_Click);
+            // 
+            // btnTabCart
+            // 
+            this.btnTabCart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTabCart.FlatAppearance.BorderSize = 0;
+            this.btnTabCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabCart.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabCart.Image = global::BuyNSell.Properties.Resources.shopping_cart_2838838;
+            this.btnTabCart.Location = new System.Drawing.Point(0, 315);
+            this.btnTabCart.Name = "btnTabCart";
+            this.btnTabCart.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTabCart.Size = new System.Drawing.Size(192, 65);
+            this.btnTabCart.TabIndex = 7;
+            this.btnTabCart.Text = "CART";
+            this.btnTabCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabCart.UseVisualStyleBackColor = true;
+            this.btnTabCart.Visible = false;
+            this.btnTabCart.Click += new System.EventHandler(this.btnTabCart_Click);
+            // 
+            // btnTabAdd
+            // 
+            this.btnTabAdd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTabAdd.FlatAppearance.BorderSize = 0;
+            this.btnTabAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabAdd.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabAdd.Image = global::BuyNSell.Properties.Resources.plus_8860964;
+            this.btnTabAdd.Location = new System.Drawing.Point(0, 250);
+            this.btnTabAdd.Name = "btnTabAdd";
+            this.btnTabAdd.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTabAdd.Size = new System.Drawing.Size(192, 65);
+            this.btnTabAdd.TabIndex = 6;
+            this.btnTabAdd.Text = "ADD";
+            this.btnTabAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabAdd.UseVisualStyleBackColor = true;
+            this.btnTabAdd.Visible = false;
+            this.btnTabAdd.Click += new System.EventHandler(this.btnTabAdd_Click);
+            // 
+            // btnTabLogin
+            // 
+            this.btnTabLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTabLogin.FlatAppearance.BorderSize = 0;
+            this.btnTabLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabLogin.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnTabLogin.Image")));
+            this.btnTabLogin.Location = new System.Drawing.Point(0, 185);
+            this.btnTabLogin.Name = "btnTabLogin";
+            this.btnTabLogin.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTabLogin.Size = new System.Drawing.Size(192, 65);
+            this.btnTabLogin.TabIndex = 4;
+            this.btnTabLogin.Text = "LOGIN";
+            this.btnTabLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabLogin.UseVisualStyleBackColor = true;
+            this.btnTabLogin.Click += new System.EventHandler(this.btnTabLogin_Click);
+            // 
+            // btnTabHome
+            // 
+            this.btnTabHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(47)))), ((int)(((byte)(255)))));
+            this.btnTabHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTabHome.FlatAppearance.BorderSize = 0;
+            this.btnTabHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabHome.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabHome.Image = ((System.Drawing.Image)(resources.GetObject("btnTabHome.Image")));
+            this.btnTabHome.Location = new System.Drawing.Point(0, 120);
+            this.btnTabHome.Name = "btnTabHome";
+            this.btnTabHome.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTabHome.Size = new System.Drawing.Size(192, 65);
+            this.btnTabHome.TabIndex = 3;
+            this.btnTabHome.Text = "HOME";
+            this.btnTabHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabHome.UseVisualStyleBackColor = false;
+            this.btnTabHome.Click += new System.EventHandler(this.btnTabHome_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.panel2.BackgroundImage = global::BuyNSell.Properties.Resources.buyNsell;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(192, 108);
+            this.panel2.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::BuyNSell.Properties.Resources.padlock;
+            this.pictureBox2.Location = new System.Drawing.Point(705, 235);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(705, 148);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.Image = global::BuyNSell.Properties.Resources.email;
+            this.pictureBox5.Location = new System.Drawing.Point(705, 235);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 14;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::BuyNSell.Properties.Resources.padlock;
+            this.pictureBox3.Location = new System.Drawing.Point(705, 322);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(705, 148);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.btnAddProduct.FlatAppearance.BorderSize = 0;
+            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddProduct.Font = new System.Drawing.Font("Lovelo Black", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAddProduct.Image = global::BuyNSell.Properties.Resources.icons8_paper_plane_64;
+            this.btnAddProduct.Location = new System.Drawing.Point(785, 459);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(95, 68);
+            this.btnAddProduct.TabIndex = 15;
+            this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.btnUpload.FlatAppearance.BorderSize = 0;
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.Font = new System.Drawing.Font("Lovelo Black", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnUpload.Image = global::BuyNSell.Properties.Resources.upload_4052016;
+            this.btnUpload.Location = new System.Drawing.Point(340, 401);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnUpload.Size = new System.Drawing.Size(190, 52);
+            this.btnUpload.TabIndex = 14;
+            this.btnUpload.Text = "UPLOAD";
+            this.btnUpload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // btnReceipt
+            // 
+            this.btnReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.btnReceipt.FlatAppearance.BorderSize = 0;
+            this.btnReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReceipt.Font = new System.Drawing.Font("Lovelo Black", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceipt.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnReceipt.Image = global::BuyNSell.Properties.Resources.money_13860855;
+            this.btnReceipt.Location = new System.Drawing.Point(679, 449);
+            this.btnReceipt.Name = "btnReceipt";
+            this.btnReceipt.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.btnReceipt.Size = new System.Drawing.Size(190, 66);
+            this.btnReceipt.TabIndex = 12;
+            this.btnReceipt.Text = "RECEIPT";
+            this.btnReceipt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReceipt.UseVisualStyleBackColor = false;
+            this.btnReceipt.Visible = false;
+            this.btnReceipt.Click += new System.EventHandler(this.btnReceipt_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -821,19 +856,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabLogin.ResumeLayout(false);
             this.tabLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabRegister.ResumeLayout(false);
             this.tabRegister.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabAdd.ResumeLayout(false);
             this.tabAdd.PerformLayout();
+            this.tabCart.ResumeLayout(false);
+            this.tabCart.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shopNsellDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -896,6 +933,8 @@
         private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.ComboBox comBoxProdType;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label labelCartEmpty;
+        private System.Windows.Forms.Button btnReceipt;
     }
 }
 

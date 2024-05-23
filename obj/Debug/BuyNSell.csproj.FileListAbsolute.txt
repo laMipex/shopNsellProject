@@ -8,3 +8,10 @@ C:\Users\mihaj\Desktop\Programiranje\BuyNSell\obj\Debug\BuyNSell.csproj.Generate
 C:\Users\mihaj\Desktop\Programiranje\BuyNSell\obj\Debug\BuyNSell.csproj.CoreCompileInputs.cache
 C:\Users\mihaj\Desktop\Programiranje\BuyNSell\obj\Debug\BuyNSell.exe
 C:\Users\mihaj\Desktop\Programiranje\BuyNSell\obj\Debug\BuyNSell.pdb
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\bin\Debug\IronBarCode.dll
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\bin\Debug\itextsharp.dll
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\bin\Debug\itextsharp.pdfa.dll
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\bin\Debug\itextsharp.xtra.dll
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\bin\Debug\IronBarCode.xml
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\bin\Debug\itextsharp.xml
+C:\Users\mihaj\Desktop\Programiranje\BuyNSell\obj\Debug\BuyNSell.csproj.Up2Date
