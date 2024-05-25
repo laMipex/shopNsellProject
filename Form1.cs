@@ -19,6 +19,7 @@ namespace BuyNSell
         private DatabaseHelper dbHelper = new DatabaseHelper();
         private string imageUrl;
         bool login = false;
+        private int selectedItemID = -1;
 
         public Form1()
         {
@@ -39,6 +40,10 @@ namespace BuyNSell
             dataGridView1.DefaultCellStyle.BackColor = Color.FromArgb(30, 30, 30);
             dataGridView1.DefaultCellStyle.ForeColor = Color.White;
             dataGridView1.DefaultCellStyle.Font = new System.Drawing.Font("Lovelo Black", 15);
+
+            labelCartEmpty.Visible = true;
+            labelCartEmpty.Text = "Your cart is empty!";
+
 
         }
 
@@ -214,7 +219,7 @@ namespace BuyNSell
         public DataTable GetItems()
         {
             DataTable dataTable = new DataTable();
-            string query = "SELECT item_Image_Data AS Image, item_Name AS Product, item_Price AS Price, item_Condition AS Condition, item_Description AS Description FROM item";
+            string query = "SELECT itemID, item_Image_Data AS Image, item_Name AS Product, item_Price AS Price, item_Condition AS Condition, item_Description AS Description FROM item";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -237,6 +242,8 @@ namespace BuyNSell
                 if (items.Rows.Count > 0)
                 {
                     dataGridView1.DataSource = items;
+
+                    dataGridView1.Columns["itemID"].Visible = false; 
 
                     if (dataGridView1.Columns.Contains("item_Image_Data"))
                     {
@@ -284,6 +291,7 @@ namespace BuyNSell
                 MessageBox.Show("Error Loading Items: " + ex.Message);
             }
         }
+
 
         private void DataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -338,6 +346,20 @@ namespace BuyNSell
 
             labelCartEmpty.Visible = true;
             btnReceipt.Visible = false;
+
+            btnReceipt.Visible = false;
+            btnOrderItem.Visible = false;
+
+            labelYourName.Visible = false;
+            labelPhoneNum.Visible = false;
+            labelAddress.Visible = false;
+            labelCity.Visible = false;
+            labelCart.Visible = false;
+
+            txtBoxBName.Visible = false;
+            txtBoxBPNumber.Visible = false;
+            txtBoxBAddress.Visible = false;
+            txtBoxBCity.Visible = false;
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
@@ -402,7 +424,7 @@ namespace BuyNSell
 
             if (!int.TryParse(comBoxProdType.SelectedValue.ToString(), out itemTypeID))
             {
-                MessageBox.Show("Invalid Ttem Type Selected.");
+                MessageBox.Show("Invalid Item Type Selected.");
                 return;
             }
 
@@ -455,7 +477,7 @@ namespace BuyNSell
 
         private void GeneratePdfWithQrCode(string filePath, DataGridViewRow selectedRow)
         {
-            
+
             string productName = selectedRow.Cells["Product"].Value.ToString();
             string productDescription = selectedRow.Cells["Description"].Value.ToString();
             string productCondition = selectedRow.Cells["Condition"].Value.ToString();
@@ -483,7 +505,8 @@ namespace BuyNSell
                 document.Add(new Paragraph($"Product: {productName}", FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16)));
                 document.Add(new Paragraph($"Description: {productDescription}", FontFactory.GetFont(FontFactory.HELVETICA, 12)));
                 document.Add(new Paragraph($"Condition: {productCondition}", FontFactory.GetFont(FontFactory.HELVETICA, 12)));
-                document.Add(new Paragraph($"Price: {productPrice}", FontFactory.GetFont(FontFactory.HELVETICA, 12)));
+                document.Add(new Paragraph($"Price: ${productPrice}", FontFactory.GetFont(FontFactory.HELVETICA, 12)));
+                document.Add(new Paragraph("Date: " + DateTime.Now.ToString(), FontFactory.GetFont(FontFactory.HELVETICA, 12)));
 
                 using (var qrCodeStream = new MemoryStream())
                 {
@@ -501,10 +524,26 @@ namespace BuyNSell
             if (login == false)
             {
                 MessageBox.Show("Please Login First!");
+                labelCartEmpty.Visible = true;
             }
             else
             {
                 MessageBox.Show("Please Procide To Your Cart!");
+                labelCartEmpty.Visible = false;
+
+                btnReceipt.Visible = true;
+                btnOrderItem.Visible = true;
+
+                labelYourName.Visible = true;
+                labelPhoneNum.Visible = true;
+                labelAddress.Visible = true;
+                labelCity.Visible = true;
+                labelCart.Visible = true;
+
+                txtBoxBName.Visible = true;
+                txtBoxBPNumber.Visible = true;
+                txtBoxBAddress.Visible = true;
+                txtBoxBCity.Visible = true;
             }
         }
 
@@ -513,16 +552,111 @@ namespace BuyNSell
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+                selectedItemID = Convert.ToInt32(selectedRow.Cells["itemID"].Value);
+
                 string filePath = Path.Combine(Application.StartupPath, "Receipt.pdf");
                 GeneratePdfWithQrCode(filePath, selectedRow);
-                labelCartEmpty.Visible = false;
-                btnReceipt.Visible = true;
             }
         }
 
         private void btnReceipt_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("Receipt.pdf");
+        }
+
+        private void btnOrderItem_Click(object sender, EventArgs e)
+        {
+            string buyerName = txtBoxBName.Text;
+            string phoneNumber = txtBoxBPNumber.Text;
+            string city = txtBoxBCity.Text;
+            string address = txtBoxBAddress.Text;
+
+            if (string.IsNullOrEmpty(buyerName) || string.IsNullOrEmpty(phoneNumber) ||
+                string.IsNullOrEmpty(city) || string.IsNullOrEmpty(address))
+            {
+                MessageBox.Show("Please Fill In All The Fields.");
+                return;
+            }
+
+            int itemId = GetSelectedItemId();
+
+            if (itemId == -1)
+            {
+                MessageBox.Show("No Item Selected.");
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Your Item Is On Its Way!");
+                InsertOrderAndBuyer(itemId, buyerName, phoneNumber, address, city);
+
+                txtBoxBAddress.Clear();
+                txtBoxBPNumber.Clear();
+                txtBoxBName.Clear();
+                txtBoxBCity.Clear();
+
+                labelCartEmpty.Visible = true;
+                btnReceipt.Visible = false;
+
+                btnReceipt.Visible = false;
+                btnOrderItem.Visible = false;
+
+                labelYourName.Visible = false;
+                labelPhoneNum.Visible = false;
+                labelAddress.Visible = false;
+                labelCity.Visible = false;
+                labelCart.Visible = false;
+
+                txtBoxBName.Visible = false;
+                txtBoxBPNumber.Visible = false;
+                txtBoxBAddress.Visible = false;
+                txtBoxBCity.Visible = false;
+            }
+        }
+
+
+
+        private int GetSelectedItemId()
+        {
+            return selectedItemID;
+        }
+
+
+        private void InsertOrderAndBuyer(int itemId, string buyerName, string phoneNumber, string address, string town)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlTransaction transaction = connection.BeginTransaction();
+
+                try
+                {
+                    string insertOrderQuery = "INSERT INTO orderedItem (itemId, date) VALUES (@ItemID, @date); SELECT SCOPE_IDENTITY();";
+                    SqlCommand insertOrderCmd = new SqlCommand(insertOrderQuery, connection, transaction);
+                    insertOrderCmd.Parameters.AddWithValue("@ItemID", itemId);
+                    insertOrderCmd.Parameters.AddWithValue("@date", DateTime.Now);
+
+                    int orderID = Convert.ToInt32(insertOrderCmd.ExecuteScalar());
+
+                    string insertBuyerQuery = "INSERT INTO buyer (orderID, buyer_name, phone_number, address, town) " +
+                                              "VALUES (@OrderID, @BuyerName, @PhoneNumber, @Address, @Town);";
+                    SqlCommand insertBuyerCmd = new SqlCommand(insertBuyerQuery, connection, transaction);
+                    insertBuyerCmd.Parameters.AddWithValue("@OrderID", orderID);
+                    insertBuyerCmd.Parameters.AddWithValue("@BuyerName", buyerName);
+                    insertBuyerCmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                    insertBuyerCmd.Parameters.AddWithValue("@Address", address);
+                    insertBuyerCmd.Parameters.AddWithValue("@Town", town);
+
+                    insertBuyerCmd.ExecuteNonQuery();
+
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
     }
 }

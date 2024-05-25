@@ -169,5 +169,8 @@
   <ItemGroup>
     <None Include="!resource\money_13860855.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="!resource\web-store-icon_11083534.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

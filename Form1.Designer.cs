@@ -70,13 +70,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tabCart = new System.Windows.Forms.TabPage();
+            this.labelCartEmpty = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbWelcome = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Label();
             this.shopNsellDataSet = new BuyNSell.shopNsellDataSet();
             this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemTableAdapter = new BuyNSell.shopNsellDataSetTableAdapters.itemTableAdapter();
-            this.labelCartEmpty = new System.Windows.Forms.Label();
             this.btnTabLogout = new System.Windows.Forms.Button();
             this.btnTabCart = new System.Windows.Forms.Button();
             this.btnTabAdd = new System.Windows.Forms.Button();
@@ -90,7 +90,17 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.btnUpload = new System.Windows.Forms.Button();
+            this.btnOrderItem = new System.Windows.Forms.Button();
             this.btnReceipt = new System.Windows.Forms.Button();
+            this.labelCart = new System.Windows.Forms.Label();
+            this.labelYourName = new System.Windows.Forms.Label();
+            this.labelPhoneNum = new System.Windows.Forms.Label();
+            this.labelCity = new System.Windows.Forms.Label();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.txtBoxBName = new System.Windows.Forms.TextBox();
+            this.txtBoxBPNumber = new System.Windows.Forms.TextBox();
+            this.txtBoxBCity = new System.Windows.Forms.TextBox();
+            this.txtBoxBAddress = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabHome.SuspendLayout();
@@ -493,7 +503,7 @@
             "Used"});
             this.comBoxProdCond.Location = new System.Drawing.Point(342, 297);
             this.comBoxProdCond.Name = "comBoxProdCond";
-            this.comBoxProdCond.Size = new System.Drawing.Size(136, 34);
+            this.comBoxProdCond.Size = new System.Drawing.Size(138, 34);
             this.comBoxProdCond.TabIndex = 10;
             // 
             // label11
@@ -560,6 +570,16 @@
             // tabCart
             // 
             this.tabCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.tabCart.Controls.Add(this.txtBoxBAddress);
+            this.tabCart.Controls.Add(this.txtBoxBCity);
+            this.tabCart.Controls.Add(this.txtBoxBPNumber);
+            this.tabCart.Controls.Add(this.txtBoxBName);
+            this.tabCart.Controls.Add(this.labelAddress);
+            this.tabCart.Controls.Add(this.labelCity);
+            this.tabCart.Controls.Add(this.labelPhoneNum);
+            this.tabCart.Controls.Add(this.labelYourName);
+            this.tabCart.Controls.Add(this.labelCart);
+            this.tabCart.Controls.Add(this.btnOrderItem);
             this.tabCart.Controls.Add(this.btnReceipt);
             this.tabCart.Controls.Add(this.labelCartEmpty);
             this.tabCart.Location = new System.Drawing.Point(4, 22);
@@ -567,6 +587,16 @@
             this.tabCart.Size = new System.Drawing.Size(939, 596);
             this.tabCart.TabIndex = 4;
             this.tabCart.Text = "cart";
+            // 
+            // labelCartEmpty
+            // 
+            this.labelCartEmpty.AutoSize = true;
+            this.labelCartEmpty.Font = new System.Drawing.Font("Lovelo Black", 45F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCartEmpty.ForeColor = System.Drawing.Color.White;
+            this.labelCartEmpty.Location = new System.Drawing.Point(127, 214);
+            this.labelCartEmpty.Name = "labelCartEmpty";
+            this.labelCartEmpty.Size = new System.Drawing.Size(0, 77);
+            this.labelCartEmpty.TabIndex = 4;
             // 
             // panel5
             // 
@@ -616,17 +646,6 @@
             // itemTableAdapter
             // 
             this.itemTableAdapter.ClearBeforeFill = true;
-            // 
-            // labelCartEmpty
-            // 
-            this.labelCartEmpty.AutoSize = true;
-            this.labelCartEmpty.Font = new System.Drawing.Font("Lovelo Black", 45F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCartEmpty.ForeColor = System.Drawing.Color.White;
-            this.labelCartEmpty.Location = new System.Drawing.Point(127, 214);
-            this.labelCartEmpty.Name = "labelCartEmpty";
-            this.labelCartEmpty.Size = new System.Drawing.Size(650, 77);
-            this.labelCartEmpty.TabIndex = 4;
-            this.labelCartEmpty.Text = "Your cart is empty!";
             // 
             // btnTabLogout
             // 
@@ -816,6 +835,25 @@
             this.btnUpload.UseVisualStyleBackColor = false;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
+            // btnOrderItem
+            // 
+            this.btnOrderItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.btnOrderItem.FlatAppearance.BorderSize = 0;
+            this.btnOrderItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrderItem.Font = new System.Drawing.Font("Lovelo Black", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnOrderItem.Image = global::BuyNSell.Properties.Resources.web_store_icon_11083534;
+            this.btnOrderItem.Location = new System.Drawing.Point(573, 359);
+            this.btnOrderItem.Name = "btnOrderItem";
+            this.btnOrderItem.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.btnOrderItem.Size = new System.Drawing.Size(190, 66);
+            this.btnOrderItem.TabIndex = 13;
+            this.btnOrderItem.Text = "ORDER";
+            this.btnOrderItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOrderItem.UseVisualStyleBackColor = false;
+            this.btnOrderItem.Visible = false;
+            this.btnOrderItem.Click += new System.EventHandler(this.btnOrderItem_Click);
+            // 
             // btnReceipt
             // 
             this.btnReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
@@ -824,7 +862,7 @@
             this.btnReceipt.Font = new System.Drawing.Font("Lovelo Black", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReceipt.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnReceipt.Image = global::BuyNSell.Properties.Resources.money_13860855;
-            this.btnReceipt.Location = new System.Drawing.Point(679, 449);
+            this.btnReceipt.Location = new System.Drawing.Point(377, 359);
             this.btnReceipt.Name = "btnReceipt";
             this.btnReceipt.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.btnReceipt.Size = new System.Drawing.Size(190, 66);
@@ -834,6 +872,102 @@
             this.btnReceipt.UseVisualStyleBackColor = false;
             this.btnReceipt.Visible = false;
             this.btnReceipt.Click += new System.EventHandler(this.btnReceipt_Click);
+            // 
+            // labelCart
+            // 
+            this.labelCart.AutoSize = true;
+            this.labelCart.Font = new System.Drawing.Font("Lovelo Black", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCart.ForeColor = System.Drawing.Color.White;
+            this.labelCart.Location = new System.Drawing.Point(81, 48);
+            this.labelCart.Name = "labelCart";
+            this.labelCart.Size = new System.Drawing.Size(101, 43);
+            this.labelCart.TabIndex = 14;
+            this.labelCart.Text = "CART";
+            this.labelCart.Visible = false;
+            // 
+            // labelYourName
+            // 
+            this.labelYourName.AutoSize = true;
+            this.labelYourName.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelYourName.ForeColor = System.Drawing.Color.White;
+            this.labelYourName.Location = new System.Drawing.Point(124, 127);
+            this.labelYourName.Name = "labelYourName";
+            this.labelYourName.Size = new System.Drawing.Size(178, 34);
+            this.labelYourName.TabIndex = 15;
+            this.labelYourName.Text = "Your Name:";
+            this.labelYourName.Visible = false;
+            // 
+            // labelPhoneNum
+            // 
+            this.labelPhoneNum.AutoSize = true;
+            this.labelPhoneNum.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPhoneNum.ForeColor = System.Drawing.Color.White;
+            this.labelPhoneNum.Location = new System.Drawing.Point(76, 185);
+            this.labelPhoneNum.Name = "labelPhoneNum";
+            this.labelPhoneNum.Size = new System.Drawing.Size(226, 34);
+            this.labelPhoneNum.TabIndex = 16;
+            this.labelPhoneNum.Text = "Phone Number:";
+            this.labelPhoneNum.Visible = false;
+            // 
+            // labelCity
+            // 
+            this.labelCity.AutoSize = true;
+            this.labelCity.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCity.ForeColor = System.Drawing.Color.White;
+            this.labelCity.Location = new System.Drawing.Point(131, 242);
+            this.labelCity.Name = "labelCity";
+            this.labelCity.Size = new System.Drawing.Size(171, 34);
+            this.labelCity.TabIndex = 17;
+            this.labelCity.Text = "Town/City:";
+            this.labelCity.Visible = false;
+            // 
+            // labelAddress
+            // 
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddress.ForeColor = System.Drawing.Color.White;
+            this.labelAddress.Location = new System.Drawing.Point(166, 294);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(136, 34);
+            this.labelAddress.TabIndex = 18;
+            this.labelAddress.Text = "Address:";
+            this.labelAddress.Visible = false;
+            // 
+            // txtBoxBName
+            // 
+            this.txtBoxBName.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxBName.Location = new System.Drawing.Point(308, 114);
+            this.txtBoxBName.Name = "txtBoxBName";
+            this.txtBoxBName.Size = new System.Drawing.Size(510, 51);
+            this.txtBoxBName.TabIndex = 19;
+            this.txtBoxBName.Visible = false;
+            // 
+            // txtBoxBPNumber
+            // 
+            this.txtBoxBPNumber.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxBPNumber.Location = new System.Drawing.Point(308, 172);
+            this.txtBoxBPNumber.Name = "txtBoxBPNumber";
+            this.txtBoxBPNumber.Size = new System.Drawing.Size(510, 51);
+            this.txtBoxBPNumber.TabIndex = 20;
+            this.txtBoxBPNumber.Visible = false;
+            // 
+            // txtBoxBCity
+            // 
+            this.txtBoxBCity.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxBCity.Location = new System.Drawing.Point(308, 229);
+            this.txtBoxBCity.Name = "txtBoxBCity";
+            this.txtBoxBCity.Size = new System.Drawing.Size(510, 51);
+            this.txtBoxBCity.TabIndex = 21;
+            this.txtBoxBCity.Visible = false;
+            // 
+            // txtBoxBAddress
+            // 
+            this.txtBoxBAddress.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxBAddress.Location = new System.Drawing.Point(308, 286);
+            this.txtBoxBAddress.Name = "txtBoxBAddress";
+            this.txtBoxBAddress.Size = new System.Drawing.Size(510, 51);
+            this.txtBoxBAddress.TabIndex = 22;
+            this.txtBoxBAddress.Visible = false;
             // 
             // Form1
             // 
@@ -935,6 +1069,16 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label labelCartEmpty;
         private System.Windows.Forms.Button btnReceipt;
+        private System.Windows.Forms.Button btnOrderItem;
+        private System.Windows.Forms.Label labelCart;
+        private System.Windows.Forms.Label labelYourName;
+        private System.Windows.Forms.Label labelPhoneNum;
+        private System.Windows.Forms.Label labelAddress;
+        private System.Windows.Forms.Label labelCity;
+        private System.Windows.Forms.TextBox txtBoxBAddress;
+        private System.Windows.Forms.TextBox txtBoxBCity;
+        private System.Windows.Forms.TextBox txtBoxBPNumber;
+        private System.Windows.Forms.TextBox txtBoxBName;
     }
 }
 
