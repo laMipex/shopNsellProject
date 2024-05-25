@@ -1,0 +1,57 @@
+﻿SR
+
+Napraviti bazu podataka sa tabelom messages koja ima polja
+id_message,title,text,date,status(read ili unread). Uneti barem tri vesti.
+
+Na stranici index.php prikazati sve poruke koje imaju status read, na
+ovoj stranici definisati interval koji će svakih 10 sekundi izvršavati
+ajax poziv ka fajlu get.php koji će brojati koliko ima poruka koje nisu
+pročitane i taj broj će vraćati ajax pozivu u formatu you have number
+new messages, gde number predstavlja taj broj novih poruka. On može biti
+i nula. 
+Kreirati taster get all messages za prikaz svih poruka poređanih 
+u opadajućem redosledu na osnovu datuma i taster clear za brisanje tih poruka. 
+Get all messages treba da poziva novi fajl get2.php, nakon dobijanja odgovora 
+sa svim porukama pozvati funkciju loadData koja će osvežiti broj nepročitanih 
+poruka u gornjem delu. 
+Može se desiti da ste uneli novu poruku preko insert.php 
+i da ste kliknuli na get all messagess a da nije prošlo 10 sekundi i 
+broj nepročitanih poruka nije promenjen.
+
+Ovo ćete moći testirati tako što ćete napraviti fajl insert.php koji
+ima 2 polje za unos poruke i naslova poruke, ova poruka se unosi u
+tabelu messages gde je date aktuelni datum a status je po defaultu
+unread. Ukoliko pritisnu više puta taj taster u roku od 10 sekundi onda
+će stranica index vratiti broj novih poruka. Poruci možete promeniti
+status u phpmyadminu i tako će se broj pročitanih poruka smanjiti.
+
+HU
+
+Hozzon létre egy adatbázist egy messages táblázattal, amely a következő
+mezőket tartalmazza:
+id_message, title, text, date, status (read ili unread). 
+Adjon meg legalább három hírt.
+
+Az index.php oldalon jelenítse meg azokat az üzeneteket, amelyek az állapotot 
+read. Ezen az oldal létrehozni egy 10 másodpercenként végrehajtandó intervallumot
+ajax hívást a get.php fájlból, amely azt számolja, hogy hány olvasatlan üzenet van, 
+és ezt a számot fogja vissza adni az ajax hívásra a következő formátumban:
+you have number new messages, ahol a number az új üzenetek számát jelzi. A szám lehet
+nulla is. Létrehozni egy gombot get all messages, amely az összes 
+üzenetet dátum szerint csökkenő sorrendben jeleníti meg, még egy clear gombot, 
+amely törli az üzeneteket. 
+A Get all messages meg kell, hogy hívja a get2.php új fájlt, és miután megkapta 
+az összes üzenetet, hívja meg  a loadData függvényt, amely frissíti a nem olvasott 
+üzenetek számát. Előfordulhat, hogy új üzenetet írunk az insert.php-n keresztül, 
+és, hogy rá kattintunk a get all messagess-re, de mivel nem múlt el a 10 másodperc
+az olvasatlan üzenetek száma nem változik.
+
+Ezt úgy lehet tesztelni, hogy létre hozzunk egy insert.php fájlt, amely 
+két mezőt tartalmaz az üzenet beviteléhez és az üzenet címéhez. Ez az üzenet lesz
+be írva a message táblázatba az aktuális dátummal. Az üzenet alapértelmezet állapota 
+unread. 
+Amennyiben a felhasználó többször is lenyomja a gombot a 10 másodperc alatt, 
+az indexoldal visszaadja az új üzenetek számát. 
+Az üzenetek státusza megváltoztatható a phpmyadmin-ben, 
+így az olvasott üzenetek száma csökken.
+
