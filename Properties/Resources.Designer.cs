@@ -199,5 +199,15 @@ namespace BuyNSell.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap web_store_icon_11083534 {
+            get {
+                object obj = ResourceManager.GetObject("web-store-icon_11083534", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
