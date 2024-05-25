@@ -20,8 +20,12 @@ INSERT INTO item (
     item_Image_Data,
     item_typeID
 )
+<<<<<<< HEAD
+SELECT 
+=======
 
 SELECT  
+>>>>>>> f0c8ecf7a63001db232cdc76ad85b2bd8f3fd230
     'Camera Lens',
     500,
     'New',
