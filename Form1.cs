@@ -484,7 +484,7 @@ namespace BuyNSell
             string productPrice = selectedRow.Cells["Price"].Value.ToString();
             byte[] imageData = selectedRow.Cells["Image"].Value as byte[];
 
-            string qrText = $"Product: {productName}\nDescription: {productDescription}\nCondition: {productCondition}\nPrice: {productPrice}";
+            string qrText = $"Product: {productName}\nDescription: {productDescription}\nCondition: {productCondition}\nPrice: {productPrice} \nDate: {DateTime.Now}";
             var qrCode = QRCodeWriter.CreateQrCode(qrText, 200);
             var qrCodeImage = qrCode.ToBitmap();
 
@@ -614,13 +614,10 @@ namespace BuyNSell
             }
         }
 
-
-
         private int GetSelectedItemId()
         {
             return selectedItemID;
         }
-
 
         private void InsertOrderAndBuyer(int itemId, string buyerName, string phoneNumber, string address, string town)
         {
@@ -658,5 +655,6 @@ namespace BuyNSell
                 }
             }
         }
+
     }
 }

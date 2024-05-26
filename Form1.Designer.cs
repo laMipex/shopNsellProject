@@ -29,17 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnTabLogout = new System.Windows.Forms.Button();
+            this.btnTabCart = new System.Windows.Forms.Button();
+            this.btnTabAdd = new System.Windows.Forms.Button();
+            this.btnTabLogin = new System.Windows.Forms.Button();
+            this.btnTabHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabHome = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabLogin = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnTabRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,6 +56,9 @@
             this.txtBoxUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabRegister = new System.Windows.Forms.TabPage();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBoxPasswordReg = new System.Windows.Forms.TextBox();
@@ -69,7 +80,20 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.btnUpload = new System.Windows.Forms.Button();
             this.tabCart = new System.Windows.Forms.TabPage();
+            this.txtBoxBAddress = new System.Windows.Forms.TextBox();
+            this.txtBoxBCity = new System.Windows.Forms.TextBox();
+            this.txtBoxBPNumber = new System.Windows.Forms.TextBox();
+            this.txtBoxBName = new System.Windows.Forms.TextBox();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.labelCity = new System.Windows.Forms.Label();
+            this.labelPhoneNum = new System.Windows.Forms.Label();
+            this.labelYourName = new System.Windows.Forms.Label();
+            this.labelCart = new System.Windows.Forms.Label();
+            this.btnOrderItem = new System.Windows.Forms.Button();
+            this.btnReceipt = new System.Windows.Forms.Button();
             this.labelCartEmpty = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbWelcome = new System.Windows.Forms.Label();
@@ -77,46 +101,23 @@
             this.shopNsellDataSet = new BuyNSell.shopNsellDataSet();
             this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemTableAdapter = new BuyNSell.shopNsellDataSetTableAdapters.itemTableAdapter();
-            this.btnTabLogout = new System.Windows.Forms.Button();
-            this.btnTabCart = new System.Windows.Forms.Button();
-            this.btnTabAdd = new System.Windows.Forms.Button();
-            this.btnTabLogin = new System.Windows.Forms.Button();
-            this.btnTabHome = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnAddProduct = new System.Windows.Forms.Button();
-            this.btnUpload = new System.Windows.Forms.Button();
-            this.btnOrderItem = new System.Windows.Forms.Button();
-            this.btnReceipt = new System.Windows.Forms.Button();
-            this.labelCart = new System.Windows.Forms.Label();
-            this.labelYourName = new System.Windows.Forms.Label();
-            this.labelPhoneNum = new System.Windows.Forms.Label();
-            this.labelCity = new System.Windows.Forms.Label();
-            this.labelAddress = new System.Windows.Forms.Label();
-            this.txtBoxBName = new System.Windows.Forms.TextBox();
-            this.txtBoxBPNumber = new System.Windows.Forms.TextBox();
-            this.txtBoxBCity = new System.Windows.Forms.TextBox();
-            this.txtBoxBAddress = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabRegister.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabAdd.SuspendLayout();
             this.tabCart.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shopNsellDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -136,6 +137,95 @@
             this.panel1.Size = new System.Drawing.Size(192, 575);
             this.panel1.TabIndex = 0;
             // 
+            // btnTabLogout
+            // 
+            this.btnTabLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnTabLogout.FlatAppearance.BorderSize = 0;
+            this.btnTabLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabLogout.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabLogout.Image = global::BuyNSell.Properties.Resources.logout_1828479;
+            this.btnTabLogout.Location = new System.Drawing.Point(0, 510);
+            this.btnTabLogout.Name = "btnTabLogout";
+            this.btnTabLogout.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTabLogout.Size = new System.Drawing.Size(192, 65);
+            this.btnTabLogout.TabIndex = 8;
+            this.btnTabLogout.Text = "LOGOUT";
+            this.btnTabLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabLogout.UseVisualStyleBackColor = true;
+            this.btnTabLogout.Visible = false;
+            this.btnTabLogout.Click += new System.EventHandler(this.btnTabLogout_Click);
+            // 
+            // btnTabCart
+            // 
+            this.btnTabCart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTabCart.FlatAppearance.BorderSize = 0;
+            this.btnTabCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabCart.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabCart.Image = global::BuyNSell.Properties.Resources.shopping_cart_2838838;
+            this.btnTabCart.Location = new System.Drawing.Point(0, 315);
+            this.btnTabCart.Name = "btnTabCart";
+            this.btnTabCart.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTabCart.Size = new System.Drawing.Size(192, 65);
+            this.btnTabCart.TabIndex = 7;
+            this.btnTabCart.Text = "CART";
+            this.btnTabCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabCart.UseVisualStyleBackColor = true;
+            this.btnTabCart.Visible = false;
+            this.btnTabCart.Click += new System.EventHandler(this.btnTabCart_Click);
+            // 
+            // btnTabAdd
+            // 
+            this.btnTabAdd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTabAdd.FlatAppearance.BorderSize = 0;
+            this.btnTabAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabAdd.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabAdd.Image = global::BuyNSell.Properties.Resources.plus_8860964;
+            this.btnTabAdd.Location = new System.Drawing.Point(0, 250);
+            this.btnTabAdd.Name = "btnTabAdd";
+            this.btnTabAdd.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTabAdd.Size = new System.Drawing.Size(192, 65);
+            this.btnTabAdd.TabIndex = 6;
+            this.btnTabAdd.Text = "ADD";
+            this.btnTabAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabAdd.UseVisualStyleBackColor = true;
+            this.btnTabAdd.Visible = false;
+            this.btnTabAdd.Click += new System.EventHandler(this.btnTabAdd_Click);
+            // 
+            // btnTabLogin
+            // 
+            this.btnTabLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTabLogin.FlatAppearance.BorderSize = 0;
+            this.btnTabLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabLogin.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnTabLogin.Image")));
+            this.btnTabLogin.Location = new System.Drawing.Point(0, 185);
+            this.btnTabLogin.Name = "btnTabLogin";
+            this.btnTabLogin.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTabLogin.Size = new System.Drawing.Size(192, 65);
+            this.btnTabLogin.TabIndex = 4;
+            this.btnTabLogin.Text = "LOGIN";
+            this.btnTabLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabLogin.UseVisualStyleBackColor = true;
+            this.btnTabLogin.Click += new System.EventHandler(this.btnTabLogin_Click);
+            // 
+            // btnTabHome
+            // 
+            this.btnTabHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(47)))), ((int)(((byte)(255)))));
+            this.btnTabHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTabHome.FlatAppearance.BorderSize = 0;
+            this.btnTabHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabHome.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabHome.Image = ((System.Drawing.Image)(resources.GetObject("btnTabHome.Image")));
+            this.btnTabHome.Location = new System.Drawing.Point(0, 120);
+            this.btnTabHome.Name = "btnTabHome";
+            this.btnTabHome.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTabHome.Size = new System.Drawing.Size(192, 65);
+            this.btnTabHome.TabIndex = 3;
+            this.btnTabHome.Text = "HOME";
+            this.btnTabHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabHome.UseVisualStyleBackColor = false;
+            this.btnTabHome.Click += new System.EventHandler(this.btnTabHome_Click);
+            // 
             // panel3
             // 
             this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -153,6 +243,17 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(192, 9);
             this.panel4.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.panel2.BackgroundImage = global::BuyNSell.Properties.Resources.buyNsell;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(192, 108);
+            this.panel2.TabIndex = 0;
             // 
             // tabControl1
             // 
@@ -233,6 +334,28 @@
             this.tabLogin.Size = new System.Drawing.Size(939, 596);
             this.tabLogin.TabIndex = 1;
             this.tabLogin.Text = "login";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::BuyNSell.Properties.Resources.padlock;
+            this.pictureBox2.Location = new System.Drawing.Point(705, 235);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(705, 148);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // btnTabRegister
             // 
@@ -333,6 +456,39 @@
             this.tabRegister.TabIndex = 2;
             this.tabRegister.Text = "register";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.Image = global::BuyNSell.Properties.Resources.email;
+            this.pictureBox5.Location = new System.Drawing.Point(705, 235);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 14;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::BuyNSell.Properties.Resources.padlock;
+            this.pictureBox3.Location = new System.Drawing.Point(705, 322);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(705, 148);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            // 
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
@@ -419,6 +575,7 @@
             // tabAdd
             // 
             this.tabAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.tabAdd.Controls.Add(this.label15);
             this.tabAdd.Controls.Add(this.comBoxProdType);
             this.tabAdd.Controls.Add(this.label14);
             this.tabAdd.Controls.Add(this.label13);
@@ -479,7 +636,7 @@
             this.txtBoxProdPrice.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxProdPrice.Location = new System.Drawing.Point(342, 346);
             this.txtBoxProdPrice.Name = "txtBoxProdPrice";
-            this.txtBoxProdPrice.Size = new System.Drawing.Size(138, 34);
+            this.txtBoxProdPrice.Size = new System.Drawing.Size(116, 34);
             this.txtBoxProdPrice.TabIndex = 12;
             // 
             // label12
@@ -567,6 +724,39 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "Add Product";
             // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.btnAddProduct.FlatAppearance.BorderSize = 0;
+            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddProduct.Font = new System.Drawing.Font("Lovelo Black", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAddProduct.Image = global::BuyNSell.Properties.Resources.icons8_paper_plane_64;
+            this.btnAddProduct.Location = new System.Drawing.Point(785, 459);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(95, 68);
+            this.btnAddProduct.TabIndex = 15;
+            this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.btnUpload.FlatAppearance.BorderSize = 0;
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.Font = new System.Drawing.Font("Lovelo Black", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnUpload.Image = global::BuyNSell.Properties.Resources.upload_4052016;
+            this.btnUpload.Location = new System.Drawing.Point(340, 401);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnUpload.Size = new System.Drawing.Size(190, 52);
+            this.btnUpload.TabIndex = 14;
+            this.btnUpload.Text = "UPLOAD";
+            this.btnUpload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
             // tabCart
             // 
             this.tabCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -588,6 +778,140 @@
             this.tabCart.TabIndex = 4;
             this.tabCart.Text = "cart";
             // 
+            // txtBoxBAddress
+            // 
+            this.txtBoxBAddress.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxBAddress.Location = new System.Drawing.Point(308, 286);
+            this.txtBoxBAddress.Name = "txtBoxBAddress";
+            this.txtBoxBAddress.Size = new System.Drawing.Size(510, 51);
+            this.txtBoxBAddress.TabIndex = 22;
+            this.txtBoxBAddress.Visible = false;
+            // 
+            // txtBoxBCity
+            // 
+            this.txtBoxBCity.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxBCity.Location = new System.Drawing.Point(308, 229);
+            this.txtBoxBCity.Name = "txtBoxBCity";
+            this.txtBoxBCity.Size = new System.Drawing.Size(510, 51);
+            this.txtBoxBCity.TabIndex = 21;
+            this.txtBoxBCity.Visible = false;
+            // 
+            // txtBoxBPNumber
+            // 
+            this.txtBoxBPNumber.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxBPNumber.Location = new System.Drawing.Point(308, 172);
+            this.txtBoxBPNumber.Name = "txtBoxBPNumber";
+            this.txtBoxBPNumber.Size = new System.Drawing.Size(510, 51);
+            this.txtBoxBPNumber.TabIndex = 20;
+            this.txtBoxBPNumber.Visible = false;
+            // 
+            // txtBoxBName
+            // 
+            this.txtBoxBName.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxBName.Location = new System.Drawing.Point(308, 114);
+            this.txtBoxBName.Name = "txtBoxBName";
+            this.txtBoxBName.Size = new System.Drawing.Size(510, 51);
+            this.txtBoxBName.TabIndex = 19;
+            this.txtBoxBName.Visible = false;
+            // 
+            // labelAddress
+            // 
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddress.ForeColor = System.Drawing.Color.White;
+            this.labelAddress.Location = new System.Drawing.Point(166, 294);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(136, 34);
+            this.labelAddress.TabIndex = 18;
+            this.labelAddress.Text = "Address:";
+            this.labelAddress.Visible = false;
+            // 
+            // labelCity
+            // 
+            this.labelCity.AutoSize = true;
+            this.labelCity.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCity.ForeColor = System.Drawing.Color.White;
+            this.labelCity.Location = new System.Drawing.Point(131, 242);
+            this.labelCity.Name = "labelCity";
+            this.labelCity.Size = new System.Drawing.Size(171, 34);
+            this.labelCity.TabIndex = 17;
+            this.labelCity.Text = "Town/City:";
+            this.labelCity.Visible = false;
+            // 
+            // labelPhoneNum
+            // 
+            this.labelPhoneNum.AutoSize = true;
+            this.labelPhoneNum.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPhoneNum.ForeColor = System.Drawing.Color.White;
+            this.labelPhoneNum.Location = new System.Drawing.Point(76, 185);
+            this.labelPhoneNum.Name = "labelPhoneNum";
+            this.labelPhoneNum.Size = new System.Drawing.Size(226, 34);
+            this.labelPhoneNum.TabIndex = 16;
+            this.labelPhoneNum.Text = "Phone Number:";
+            this.labelPhoneNum.Visible = false;
+            // 
+            // labelYourName
+            // 
+            this.labelYourName.AutoSize = true;
+            this.labelYourName.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelYourName.ForeColor = System.Drawing.Color.White;
+            this.labelYourName.Location = new System.Drawing.Point(124, 127);
+            this.labelYourName.Name = "labelYourName";
+            this.labelYourName.Size = new System.Drawing.Size(178, 34);
+            this.labelYourName.TabIndex = 15;
+            this.labelYourName.Text = "Your Name:";
+            this.labelYourName.Visible = false;
+            // 
+            // labelCart
+            // 
+            this.labelCart.AutoSize = true;
+            this.labelCart.Font = new System.Drawing.Font("Lovelo Black", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCart.ForeColor = System.Drawing.Color.White;
+            this.labelCart.Location = new System.Drawing.Point(81, 48);
+            this.labelCart.Name = "labelCart";
+            this.labelCart.Size = new System.Drawing.Size(101, 43);
+            this.labelCart.TabIndex = 14;
+            this.labelCart.Text = "CART";
+            this.labelCart.Visible = false;
+            // 
+            // btnOrderItem
+            // 
+            this.btnOrderItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.btnOrderItem.FlatAppearance.BorderSize = 0;
+            this.btnOrderItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrderItem.Font = new System.Drawing.Font("Lovelo Black", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnOrderItem.Image = global::BuyNSell.Properties.Resources.web_store_icon_11083534;
+            this.btnOrderItem.Location = new System.Drawing.Point(573, 359);
+            this.btnOrderItem.Name = "btnOrderItem";
+            this.btnOrderItem.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.btnOrderItem.Size = new System.Drawing.Size(190, 66);
+            this.btnOrderItem.TabIndex = 13;
+            this.btnOrderItem.Text = "ORDER";
+            this.btnOrderItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOrderItem.UseVisualStyleBackColor = false;
+            this.btnOrderItem.Visible = false;
+            this.btnOrderItem.Click += new System.EventHandler(this.btnOrderItem_Click);
+            // 
+            // btnReceipt
+            // 
+            this.btnReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.btnReceipt.FlatAppearance.BorderSize = 0;
+            this.btnReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReceipt.Font = new System.Drawing.Font("Lovelo Black", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceipt.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnReceipt.Image = global::BuyNSell.Properties.Resources.money_13860855;
+            this.btnReceipt.Location = new System.Drawing.Point(377, 359);
+            this.btnReceipt.Name = "btnReceipt";
+            this.btnReceipt.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.btnReceipt.Size = new System.Drawing.Size(190, 66);
+            this.btnReceipt.TabIndex = 12;
+            this.btnReceipt.Text = "RECEIPT";
+            this.btnReceipt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReceipt.UseVisualStyleBackColor = false;
+            this.btnReceipt.Visible = false;
+            this.btnReceipt.Click += new System.EventHandler(this.btnReceipt_Click);
+            // 
             // labelCartEmpty
             // 
             this.labelCartEmpty.AutoSize = true;
@@ -602,9 +926,9 @@
             // 
             this.panel5.Controls.Add(this.lbWelcome);
             this.panel5.Controls.Add(this.closeButton);
-            this.panel5.Location = new System.Drawing.Point(470, 0);
+            this.panel5.Location = new System.Drawing.Point(192, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(623, 37);
+            this.panel5.Size = new System.Drawing.Size(901, 37);
             this.panel5.TabIndex = 0;
             // 
             // lbWelcome
@@ -647,327 +971,16 @@
             // 
             this.itemTableAdapter.ClearBeforeFill = true;
             // 
-            // btnTabLogout
+            // label15
             // 
-            this.btnTabLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnTabLogout.FlatAppearance.BorderSize = 0;
-            this.btnTabLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabLogout.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabLogout.Image = global::BuyNSell.Properties.Resources.logout_1828479;
-            this.btnTabLogout.Location = new System.Drawing.Point(0, 510);
-            this.btnTabLogout.Name = "btnTabLogout";
-            this.btnTabLogout.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnTabLogout.Size = new System.Drawing.Size(192, 65);
-            this.btnTabLogout.TabIndex = 8;
-            this.btnTabLogout.Text = "LOGOUT";
-            this.btnTabLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTabLogout.UseVisualStyleBackColor = true;
-            this.btnTabLogout.Visible = false;
-            this.btnTabLogout.Click += new System.EventHandler(this.btnTabLogout_Click);
-            // 
-            // btnTabCart
-            // 
-            this.btnTabCart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTabCart.FlatAppearance.BorderSize = 0;
-            this.btnTabCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabCart.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabCart.Image = global::BuyNSell.Properties.Resources.shopping_cart_2838838;
-            this.btnTabCart.Location = new System.Drawing.Point(0, 315);
-            this.btnTabCart.Name = "btnTabCart";
-            this.btnTabCart.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnTabCart.Size = new System.Drawing.Size(192, 65);
-            this.btnTabCart.TabIndex = 7;
-            this.btnTabCart.Text = "CART";
-            this.btnTabCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTabCart.UseVisualStyleBackColor = true;
-            this.btnTabCart.Visible = false;
-            this.btnTabCart.Click += new System.EventHandler(this.btnTabCart_Click);
-            // 
-            // btnTabAdd
-            // 
-            this.btnTabAdd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTabAdd.FlatAppearance.BorderSize = 0;
-            this.btnTabAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabAdd.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabAdd.Image = global::BuyNSell.Properties.Resources.plus_8860964;
-            this.btnTabAdd.Location = new System.Drawing.Point(0, 250);
-            this.btnTabAdd.Name = "btnTabAdd";
-            this.btnTabAdd.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnTabAdd.Size = new System.Drawing.Size(192, 65);
-            this.btnTabAdd.TabIndex = 6;
-            this.btnTabAdd.Text = "ADD";
-            this.btnTabAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTabAdd.UseVisualStyleBackColor = true;
-            this.btnTabAdd.Visible = false;
-            this.btnTabAdd.Click += new System.EventHandler(this.btnTabAdd_Click);
-            // 
-            // btnTabLogin
-            // 
-            this.btnTabLogin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTabLogin.FlatAppearance.BorderSize = 0;
-            this.btnTabLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabLogin.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnTabLogin.Image")));
-            this.btnTabLogin.Location = new System.Drawing.Point(0, 185);
-            this.btnTabLogin.Name = "btnTabLogin";
-            this.btnTabLogin.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnTabLogin.Size = new System.Drawing.Size(192, 65);
-            this.btnTabLogin.TabIndex = 4;
-            this.btnTabLogin.Text = "LOGIN";
-            this.btnTabLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTabLogin.UseVisualStyleBackColor = true;
-            this.btnTabLogin.Click += new System.EventHandler(this.btnTabLogin_Click);
-            // 
-            // btnTabHome
-            // 
-            this.btnTabHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(47)))), ((int)(((byte)(255)))));
-            this.btnTabHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTabHome.FlatAppearance.BorderSize = 0;
-            this.btnTabHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabHome.Font = new System.Drawing.Font("Lovelo Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabHome.Image = ((System.Drawing.Image)(resources.GetObject("btnTabHome.Image")));
-            this.btnTabHome.Location = new System.Drawing.Point(0, 120);
-            this.btnTabHome.Name = "btnTabHome";
-            this.btnTabHome.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnTabHome.Size = new System.Drawing.Size(192, 65);
-            this.btnTabHome.TabIndex = 3;
-            this.btnTabHome.Text = "HOME";
-            this.btnTabHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTabHome.UseVisualStyleBackColor = false;
-            this.btnTabHome.Click += new System.EventHandler(this.btnTabHome_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
-            this.panel2.BackgroundImage = global::BuyNSell.Properties.Resources.buyNsell;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(192, 108);
-            this.panel2.TabIndex = 0;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = global::BuyNSell.Properties.Resources.padlock;
-            this.pictureBox2.Location = new System.Drawing.Point(705, 235);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(705, 148);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.Image = global::BuyNSell.Properties.Resources.email;
-            this.pictureBox5.Location = new System.Drawing.Point(705, 235);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 14;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = global::BuyNSell.Properties.Resources.padlock;
-            this.pictureBox3.Location = new System.Drawing.Point(705, 322);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(705, 148);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
-            // 
-            // btnAddProduct
-            // 
-            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
-            this.btnAddProduct.FlatAppearance.BorderSize = 0;
-            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddProduct.Font = new System.Drawing.Font("Lovelo Black", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAddProduct.Image = global::BuyNSell.Properties.Resources.icons8_paper_plane_64;
-            this.btnAddProduct.Location = new System.Drawing.Point(785, 459);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(95, 68);
-            this.btnAddProduct.TabIndex = 15;
-            this.btnAddProduct.UseVisualStyleBackColor = false;
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
-            // 
-            // btnUpload
-            // 
-            this.btnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
-            this.btnUpload.FlatAppearance.BorderSize = 0;
-            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Font = new System.Drawing.Font("Lovelo Black", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpload.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnUpload.Image = global::BuyNSell.Properties.Resources.upload_4052016;
-            this.btnUpload.Location = new System.Drawing.Point(340, 401);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnUpload.Size = new System.Drawing.Size(190, 52);
-            this.btnUpload.TabIndex = 14;
-            this.btnUpload.Text = "UPLOAD";
-            this.btnUpload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUpload.UseVisualStyleBackColor = false;
-            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
-            // 
-            // btnOrderItem
-            // 
-            this.btnOrderItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
-            this.btnOrderItem.FlatAppearance.BorderSize = 0;
-            this.btnOrderItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrderItem.Font = new System.Drawing.Font("Lovelo Black", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnOrderItem.Image = global::BuyNSell.Properties.Resources.web_store_icon_11083534;
-            this.btnOrderItem.Location = new System.Drawing.Point(573, 359);
-            this.btnOrderItem.Name = "btnOrderItem";
-            this.btnOrderItem.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnOrderItem.Size = new System.Drawing.Size(190, 66);
-            this.btnOrderItem.TabIndex = 13;
-            this.btnOrderItem.Text = "ORDER";
-            this.btnOrderItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOrderItem.UseVisualStyleBackColor = false;
-            this.btnOrderItem.Visible = false;
-            this.btnOrderItem.Click += new System.EventHandler(this.btnOrderItem_Click);
-            // 
-            // btnReceipt
-            // 
-            this.btnReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
-            this.btnReceipt.FlatAppearance.BorderSize = 0;
-            this.btnReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReceipt.Font = new System.Drawing.Font("Lovelo Black", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReceipt.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReceipt.Image = global::BuyNSell.Properties.Resources.money_13860855;
-            this.btnReceipt.Location = new System.Drawing.Point(377, 359);
-            this.btnReceipt.Name = "btnReceipt";
-            this.btnReceipt.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnReceipt.Size = new System.Drawing.Size(190, 66);
-            this.btnReceipt.TabIndex = 12;
-            this.btnReceipt.Text = "RECEIPT";
-            this.btnReceipt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReceipt.UseVisualStyleBackColor = false;
-            this.btnReceipt.Visible = false;
-            this.btnReceipt.Click += new System.EventHandler(this.btnReceipt_Click);
-            // 
-            // labelCart
-            // 
-            this.labelCart.AutoSize = true;
-            this.labelCart.Font = new System.Drawing.Font("Lovelo Black", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCart.ForeColor = System.Drawing.Color.White;
-            this.labelCart.Location = new System.Drawing.Point(81, 48);
-            this.labelCart.Name = "labelCart";
-            this.labelCart.Size = new System.Drawing.Size(101, 43);
-            this.labelCart.TabIndex = 14;
-            this.labelCart.Text = "CART";
-            this.labelCart.Visible = false;
-            // 
-            // labelYourName
-            // 
-            this.labelYourName.AutoSize = true;
-            this.labelYourName.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelYourName.ForeColor = System.Drawing.Color.White;
-            this.labelYourName.Location = new System.Drawing.Point(124, 127);
-            this.labelYourName.Name = "labelYourName";
-            this.labelYourName.Size = new System.Drawing.Size(178, 34);
-            this.labelYourName.TabIndex = 15;
-            this.labelYourName.Text = "Your Name:";
-            this.labelYourName.Visible = false;
-            // 
-            // labelPhoneNum
-            // 
-            this.labelPhoneNum.AutoSize = true;
-            this.labelPhoneNum.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPhoneNum.ForeColor = System.Drawing.Color.White;
-            this.labelPhoneNum.Location = new System.Drawing.Point(76, 185);
-            this.labelPhoneNum.Name = "labelPhoneNum";
-            this.labelPhoneNum.Size = new System.Drawing.Size(226, 34);
-            this.labelPhoneNum.TabIndex = 16;
-            this.labelPhoneNum.Text = "Phone Number:";
-            this.labelPhoneNum.Visible = false;
-            // 
-            // labelCity
-            // 
-            this.labelCity.AutoSize = true;
-            this.labelCity.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCity.ForeColor = System.Drawing.Color.White;
-            this.labelCity.Location = new System.Drawing.Point(131, 242);
-            this.labelCity.Name = "labelCity";
-            this.labelCity.Size = new System.Drawing.Size(171, 34);
-            this.labelCity.TabIndex = 17;
-            this.labelCity.Text = "Town/City:";
-            this.labelCity.Visible = false;
-            // 
-            // labelAddress
-            // 
-            this.labelAddress.AutoSize = true;
-            this.labelAddress.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddress.ForeColor = System.Drawing.Color.White;
-            this.labelAddress.Location = new System.Drawing.Point(166, 294);
-            this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(136, 34);
-            this.labelAddress.TabIndex = 18;
-            this.labelAddress.Text = "Address:";
-            this.labelAddress.Visible = false;
-            // 
-            // txtBoxBName
-            // 
-            this.txtBoxBName.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxBName.Location = new System.Drawing.Point(308, 114);
-            this.txtBoxBName.Name = "txtBoxBName";
-            this.txtBoxBName.Size = new System.Drawing.Size(510, 51);
-            this.txtBoxBName.TabIndex = 19;
-            this.txtBoxBName.Visible = false;
-            // 
-            // txtBoxBPNumber
-            // 
-            this.txtBoxBPNumber.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxBPNumber.Location = new System.Drawing.Point(308, 172);
-            this.txtBoxBPNumber.Name = "txtBoxBPNumber";
-            this.txtBoxBPNumber.Size = new System.Drawing.Size(510, 51);
-            this.txtBoxBPNumber.TabIndex = 20;
-            this.txtBoxBPNumber.Visible = false;
-            // 
-            // txtBoxBCity
-            // 
-            this.txtBoxBCity.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxBCity.Location = new System.Drawing.Point(308, 229);
-            this.txtBoxBCity.Name = "txtBoxBCity";
-            this.txtBoxBCity.Size = new System.Drawing.Size(510, 51);
-            this.txtBoxBCity.TabIndex = 21;
-            this.txtBoxBCity.Visible = false;
-            // 
-            // txtBoxBAddress
-            // 
-            this.txtBoxBAddress.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxBAddress.Location = new System.Drawing.Point(308, 286);
-            this.txtBoxBAddress.Name = "txtBoxBAddress";
-            this.txtBoxBAddress.Size = new System.Drawing.Size(510, 51);
-            this.txtBoxBAddress.TabIndex = 22;
-            this.txtBoxBAddress.Visible = false;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Lovelo Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(459, 347);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(29, 34);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "$";
             // 
             // Form1
             // 
@@ -990,8 +1003,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabLogin.ResumeLayout(false);
             this.tabLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabRegister.ResumeLayout(false);
             this.tabRegister.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabAdd.ResumeLayout(false);
             this.tabAdd.PerformLayout();
             this.tabCart.ResumeLayout(false);
@@ -1000,11 +1018,6 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shopNsellDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1079,6 +1092,7 @@
         private System.Windows.Forms.TextBox txtBoxBCity;
         private System.Windows.Forms.TextBox txtBoxBPNumber;
         private System.Windows.Forms.TextBox txtBoxBName;
+        private System.Windows.Forms.Label label15;
     }
 }
 
