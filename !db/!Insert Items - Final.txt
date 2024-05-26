@@ -1,3 +1,4 @@
+SET IDENTITY_INSERT itemType ON;
 
 INSERT INTO itemType (item_typeID, item_Type)
 VALUES 
@@ -11,6 +12,7 @@ VALUES
     (8, 'Clothes'),
     (9, 'Shoes');
 
+SET IDENTITY_INSERT itemType OFF;
 
 INSERT INTO item (
     item_Name,
@@ -30,7 +32,7 @@ SELECT
     CONVERT(VARBINARY(MAX), BulkColumn),
     1  
 FROM 
-    OPENROWSET(Bulk 'C:\Users\mihaj\Desktop\resource\products\cameraLens.jpg', SINGLE_BLOB) AS ImageData;
+    OPENROWSET(Bulk 'C:\Users\mihaj\Desktop\Programiranje\BuyNSell\!resource\products\cameraLens.jpg', SINGLE_BLOB) AS ImageData;
 
 
 INSERT INTO item (
@@ -51,7 +53,7 @@ SELECT
     CONVERT(VARBINARY(MAX), BulkColumn),
     2
 FROM 
-    OPENROWSET(Bulk 'C:\Users\mihaj\Desktop\resource\products\hilfigerWatch.jpg', SINGLE_BLOB) AS ImageData;
+    OPENROWSET(Bulk 'C:\Users\mihaj\Desktop\Programiranje\BuyNSell\!resource\products\hilfigerWatch.jpg', SINGLE_BLOB) AS ImageData;
 
 
 INSERT INTO item (
@@ -72,7 +74,7 @@ SELECT
     CONVERT(VARBINARY(MAX), BulkColumn),
     1
 FROM 
-    OPENROWSET(Bulk 'C:\Users\mihaj\Desktop\resource\products\instamatic133.jpg', SINGLE_BLOB) AS ImageData;
+    OPENROWSET(Bulk 'C:\Users\mihaj\Desktop\Programiranje\BuyNSell\!resource\products\instamatic133.jpg', SINGLE_BLOB) AS ImageData;
 
 
 INSERT INTO item (
@@ -93,7 +95,7 @@ SELECT
     CONVERT(VARBINARY(MAX), BulkColumn),
     1
 FROM 
-    OPENROWSET(Bulk 'C:\Users\mihaj\Desktop\resource\products\laptop.jpg', SINGLE_BLOB) AS ImageData;
+    OPENROWSET(Bulk 'C:\Users\mihaj\Desktop\Programiranje\BuyNSell\!resource\products\laptop.jpg', SINGLE_BLOB) AS ImageData;
 
 
 INSERT INTO item (
@@ -114,7 +116,7 @@ SELECT
     CONVERT(VARBINARY(MAX), BulkColumn),
     2
 FROM 
-    OPENROWSET(Bulk 'C:\Users\mihaj\Desktop\resource\products\smartWatch.jpg', SINGLE_BLOB) AS ImageData;
+    OPENROWSET(Bulk 'C:\Users\mihaj\Desktop\Programiranje\BuyNSell\!resource\products\smartWatch.jpg', SINGLE_BLOB) AS ImageData;
 
 
 INSERT INTO item (

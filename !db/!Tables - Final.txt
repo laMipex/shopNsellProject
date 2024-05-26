@@ -1,0 +1,105 @@
+CREATE TABLE itemType (
+    item_typeID INT PRIMARY KEY IDENTITY(1,1),
+    item_Type VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE item (
+    itemID INT PRIMARY KEY IDENTITY(1,1),
+    item_Name VARCHAR(100) NOT NULL,
+    item_Price INT NOT NULL,
+    item_Condition VARCHAR(20) NOT NULL,
+    item_Description VARCHAR(200) NOT NULL,
+    item_Image_Name VARCHAR(100) NULL,
+    item_Image_Data VARBINARY(MAX) NULL,
+    item_typeID INT NOT NULL,
+    CONSTRAINT fk_itemType
+    FOREIGN KEY (item_typeID)
+    REFERENCES itemType (item_typeID)
+);
+
+CREATE TABLE seller (
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    seller_name VARCHAR(20) NOT NULL,
+    phone_number VARCHAR(20) NOT NULL,
+    town VARCHAR(20) NOT NULL,
+    itemID INT NOT NULL UNIQUE,
+    CONSTRAINT fk_itemID
+    FOREIGN KEY (itemID)
+    REFERENCES item(itemID)
+);
+
+CREATE TABLE orderedItem (
+    orderID INT PRIMARY KEY IDENTITY(1,1),
+    itemID INT NOT NULL,
+    date DATETIME NOT NULL,
+    CONSTRAINT fk_itemID2
+    FOREIGN KEY (itemID)
+    REFERENCES item(itemID)
+);
+
+CREATE TABLE buyer (
+    buyerID INT PRIMARY KEY IDENTITY(1,1),
+    orderID INT NOT NULL UNIQUE,
+    buyer_name VARCHAR(50) NOT NULL,
+    phone_number VARCHAR(20) NOT NULL,
+    address VARCHAR(50) NOT NULL,
+    town VARCHAR(50) NOT NULL,
+    CONSTRAINT fk_orderID2
+    FOREIGN KEY (orderID)
+    REFERENCES orderedItem(orderID)
+);
+
+CREATE TABLE paymentDetails (
+    paymentID INT PRIMARY KEY IDENTITY(1,1),
+    orderID INT NOT NULL UNIQUE,
+    buyerID INT NOT NULL UNIQUE,
+    amount INT NOT NULL,
+    provider VARCHAR(20) NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    CONSTRAINT fk_orderID
+    FOREIGN KEY (orderID)
+    REFERENCES orderedItem(orderID),
+    CONSTRAINT fk_buyerID
+    FOREIGN KEY (buyerID)
+    REFERENCES buyer(buyerID)
+);
+
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY IDENTITY(1,1),
+    Username NVARCHAR(50) NOT NULL,
+    Email NVARCHAR(100) NOT NULL,
+    Password NVARCHAR(255) NOT NULL
+);
+
+
+----- DO THIS AFTER -----
+
+ALTER TABLE item DROP CONSTRAINT fk_itemType;
+ALTER TABLE seller DROP CONSTRAINT fk_itemID;
+ALTER TABLE orderedItem DROP CONSTRAINT fk_itemID2;
+
+DROP TABLE item;
+
+CREATE TABLE item (
+    itemID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    item_Name VARCHAR(100) NOT NULL,
+    item_Price INT NOT NULL,
+    item_Condition VARCHAR(20) NOT NULL,
+    item_Description VARCHAR(200) NOT NULL,
+    item_Image_Name VARCHAR(100) NULL,
+    item_Image_Data VARBINARY(MAX) NULL,
+    item_typeID INT NOT NULL,
+    CONSTRAINT fk_itemType
+    FOREIGN KEY (item_typeID)
+    REFERENCES itemType (item_typeID)
+);
+
+ALTER TABLE seller
+ADD CONSTRAINT fk_itemID
+FOREIGN KEY (itemID)
+REFERENCES item (itemID);
+
+ALTER TABLE orderedItem
+ADD CONSTRAINT fk_itemID2
+FOREIGN KEY (itemID)
+REFERENCES item (itemID);
