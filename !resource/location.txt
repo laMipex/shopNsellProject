@@ -1,2 +1,0 @@
-X/Close button - 845, 3
-Welcome - 6, 10
