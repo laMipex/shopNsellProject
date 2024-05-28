@@ -8,7 +8,7 @@ namespace BuyNSell
 {
     public class DatabaseHelper
     {
-        private string connectionString = "Data Source=DESKTOP-2AAQ8OB;Initial Catalog=shopNsell;Integrated Security=True";
+        private string connectionString = "Data Source=DESKTOP-LD9GF3V\\SQLEXPRESS;Initial Catalog=shopNsell;Integrated Security=True";
 
         public DataTable GetItems()
         {

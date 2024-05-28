@@ -44,7 +44,8 @@ namespace BuyNSell
             labelCartEmpty.Visible = true;
             labelCartEmpty.Text = "Your cart is empty!";
 
-
+            comBoxPrice.SelectedIndexChanged += new EventHandler(comBoxPrice_SelectedIndexChanged);
+            comBoxType.SelectedIndexChanged += new EventHandler(comBoxType_SelectedIndexChanged);            
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -218,8 +219,40 @@ namespace BuyNSell
 
         public DataTable GetItems()
         {
+
             DataTable dataTable = new DataTable();
-            string query = "SELECT itemID, item_Image_Data AS Image, item_Name AS Product, item_Price AS Price, item_Condition AS Condition, item_Description AS Description FROM item";
+            int selectedType;
+            string order = comBoxPrice.SelectedItem?.ToString();
+            string TypeAll = comBoxType.SelectedItem?.ToString();
+
+            string query = "SELECT i.itemID, i.item_Image_Data AS Image, i.item_Name AS Product, i.item_Price AS Price," +
+                " i.item_Condition AS Condition, i.item_Description AS Description FROM item i " +
+                "INNER JOIN itemType it ON i.item_typeID = it.item_typeID";
+
+
+            if (comBoxType.SelectedValue != null && comBoxType.SelectedValue.ToString() != "-1")
+            {
+
+                if (!int.TryParse(comBoxType.SelectedValue.ToString(), out selectedType))
+                {
+                    MessageBox.Show("Invalid Item Type Selected.");
+
+                }
+                else
+                {
+                    query += " WHERE it.item_typeID = " + selectedType;
+                }
+            }
+
+
+            if (order == "higher")
+            {
+                query += " ORDER BY i.item_Price DESC";
+            }
+            else if (order == "lower")
+            {
+                query += " ORDER BY i.item_Price ASC";
+            }
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -233,6 +266,15 @@ namespace BuyNSell
             return dataTable;
         }
 
+        private void comBoxPrice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadItems();
+        }
+        private void comBoxType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadItems();
+        }
+
         private void LoadItems()
         {
             try
@@ -243,7 +285,7 @@ namespace BuyNSell
                 {
                     dataGridView1.DataSource = items;
 
-                    dataGridView1.Columns["itemID"].Visible = false; 
+                    dataGridView1.Columns["itemID"].Visible = false;
 
                     if (dataGridView1.Columns.Contains("item_Image_Data"))
                     {
@@ -292,7 +334,6 @@ namespace BuyNSell
             }
         }
 
-
         private void DataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -328,7 +369,6 @@ namespace BuyNSell
                 }
             }
         }
-
 
         private void btnTabLogout_Click(object sender, EventArgs e)
         {
@@ -398,13 +438,22 @@ namespace BuyNSell
                         DataTable dataTable = new DataTable();
                         dataTable.Load(reader);
 
+                        DataRow allRow = dataTable.NewRow();
+                        allRow["item_Type"] = "All";
+                        allRow["item_typeID"] = -1; 
+                        dataTable.Rows.InsertAt(allRow, 0);
+
                         comBoxProdType.DataSource = dataTable;
                         comBoxProdType.DisplayMember = "item_Type";
                         comBoxProdType.ValueMember = "item_typeID";
+                        comBoxType.DataSource = dataTable;
+                        comBoxType.DisplayMember = "item_Type";
+                        comBoxType.ValueMember = "item_typeID";
                     }
                 }
             }
         }
+
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
@@ -473,6 +522,7 @@ namespace BuyNSell
         private void Form1_Load(object sender, EventArgs e)
         {
             comBoxProdType.SelectedIndex = -1;
+            comBoxType.SelectedIndex = -1;
         }
 
         private void GeneratePdfWithQrCode(string filePath, DataGridViewRow selectedRow)
@@ -656,5 +706,40 @@ namespace BuyNSell
             }
         }
 
+        private void txtBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchString = txtBoxSearch.Text;
+            string query = "SELECT i.itemID, i.item_Image_Data AS Image, i.item_Name AS Product, i.item_Price AS Price, i.item_Condition AS Condition, i.item_Description AS Description " +
+                           "FROM item i INNER JOIN itemType it ON i.item_typeID = it.item_typeID";
+
+            if (!string.IsNullOrWhiteSpace(searchString))
+            {
+                query += " WHERE i.item_Name LIKE @searchString";
+            }
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                if (!string.IsNullOrWhiteSpace(searchString))
+                {
+                    command.Parameters.AddWithValue("@searchString", "%" + searchString + "%");
+                }
+
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    DataTable dataTable = new DataTable();
+                    dataTable.Load(reader);
+                    dataGridView1.DataSource = dataTable;
+                }
+            }
+
+            if (dataGridView1.Rows.Count == 0)
+            {
+                labelSearch.Visible = true;
+            }
+            else
+                labelSearch.Visible = false;
+        }
     }
 }
